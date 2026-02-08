@@ -172,9 +172,22 @@ function chooseService(service){
 
 function confirmBooking(e){
   e.preventDefault();
-  successMsg.textContent=`${selectedService} booked successfully!`;
+
+  const payMethod = payment.value;
+
+  if(payMethod === "Cash"){
+    successMsg.innerHTML =
+      `${selectedService} booked successfully!<br>
+       Payment status: Pending (Cash on service)`;
+  } 
+  else {
+    successMsg.innerHTML =
+      `${selectedService} payment completed successfully!`;
+  }
+
   show('success');
 }
+
 
 function openReviewForm(){show('reviewForm')}
 
@@ -195,4 +208,6 @@ function openReviews(){
 </script>
 
 </body>
+
 </html>
+
