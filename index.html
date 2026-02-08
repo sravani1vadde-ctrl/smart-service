@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Smart Service Platform</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
+body{background:linear-gradient(135deg,#5f9cff,#8fd3f4);min-height:100vh;display:flex;justify-content:center;align-items:center}
+.container{width:95%;max-width:1100px;background:white;border-radius:20px;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,0.2)}
+header{padding:20px;text-align:center;background:linear-gradient(90deg,#667eea,#764ba2);color:white}
+section{padding:20px}
+.hidden{display:none}
+
+.services{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:15px}
+.card{background:#f4f4f4;border-radius:12px;overflow:hidden;cursor:pointer;transition:.3s}
+.card img{width:100%;height:130px;object-fit:cover}
+.card:hover{transform:scale(1.03)}
+.card div{padding:10px;text-align:center}
+
+input,select,textarea{width:100%;padding:10px;margin:6px 0;border-radius:8px;border:1px solid #ccc}
+button{padding:10px;border:none;border-radius:8px;background:#667eea;color:white;cursor:pointer;margin-top:6px}
+button:hover{background:#5a67d8}
+
+.price-box{background:#eef2ff;padding:10px;border-radius:8px;margin:8px 0;font-weight:600}
+
+.table{width:100%;border-collapse:collapse;margin-top:10px}
+.table th,.table td{border:1px solid #ddd;padding:8px;text-align:center}
+
+.review-card{background:#f7f7ff;padding:10px;border-radius:10px;margin-top:8px}
+.stars{color:#f5b301;font-size:18px}
+
+.success{text-align:center}
+.checkmark{font-size:60px;animation:pop .6s ease}
+@keyframes pop{0%{transform:scale(0)}70%{transform:scale(1.2)}100%{transform:scale(1)}}
+</style>
+</head>
+
+<body>
+<div class="container">
+<header>
+<h1>Smart Service Platform</h1>
+<p>Booking • Payment • Ratings & Reviews</p>
+</header>
+
+<!-- AUTH -->
+<section id="auth">
+<h2>Login</h2>
+<form onsubmit="authUser(event)">
+<input id="user" placeholder="Username" required>
+<input id="email" placeholder="Email" required>
+<input id="pass" type="password" placeholder="Password" required>
+<button type="submit">Enter</button>
+</form>
+<p>Admin login → admin / admin</p>
+</section>
+
+<!-- SERVICES -->
+<section id="services" class="hidden">
+<h2>Select Service</h2>
+<div class="services">
+
+<div class="card" onclick="chooseService('Cleaning')">
+<img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952">
+<div>Cleaning</div></div>
+
+<div class="card" onclick="chooseService('Plumbing')">
+<img src="https://images.unsplash.com/photo-1585704032915-c3400ca199e7">
+<div>Plumbing</div></div>
+
+<div class="card" onclick="chooseService('AC Service')">
+<img src="https://images.unsplash.com/photo-1581092334651-ddf26d9a09d0">
+<div>AC Service</div></div>
+
+<div class="card" onclick="chooseService('Cooking Service')">
+<img src="https://images.unsplash.com/photo-1498837167922-ddd27525d352">
+<div>Cooking Service</div></div>
+
+</div>
+<button onclick="openReviews()">Ratings & Reviews</button>
+<button onclick="logout()">Logout</button>
+</section>
+
+<!-- BOOKING -->
+<section id="booking" class="hidden">
+<h2>Booking & Payment</h2>
+<div class="price-box" id="priceBox"></div>
+<form onsubmit="confirmBooking(event)">
+<input id="date" type="datetime-local" required>
+<select id="payment">
+<option>UPI</option>
+<option>Card</option>
+<option>Cash</option>
+</select>
+<button type="submit">Pay & Confirm</button>
+</form>
+</section>
+
+<!-- SUCCESS -->
+<section id="success" class="hidden success">
+<div class="checkmark">✔</div>
+<h2>Payment Successful!</h2>
+<p id="successMsg"></p>
+<button onclick="openReviewForm()">Leave Review</button>
+<button onclick="show('services')">Continue</button>
+</section>
+
+<!-- REVIEW FORM -->
+<section id="reviewForm" class="hidden">
+<h2>Rate Your Service</h2>
+<form onsubmit="submitReview(event)">
+<select id="rating" required>
+<option value="">Select Rating</option>
+<option>⭐</option>
+<option>⭐⭐</option>
+<option>⭐⭐⭐</option>
+<option>⭐⭐⭐⭐</option>
+<option>⭐⭐⭐⭐⭐</option>
+</select>
+<textarea id="reviewText" placeholder="Write your review" required></textarea>
+<button type="submit">Submit Review</button>
+</form>
+</section>
+
+<!-- REVIEWS -->
+<section id="reviews" class="hidden">
+<h2>User Reviews</h2>
+<div id="reviewList"></div>
+<button onclick="show('services')">Back</button>
+</section>
+
+<footer style="text-align:center;padding:12px;background:#f5f5ff;font-weight:600">
+Thank you for using Smart Service Platform!
+</footer>
+
+</div>
+
+<script>
+let currentUser="";
+let currentEmail="";
+let selectedService="";
+
+const prices={Cleaning:500,Plumbing:600,"AC Service":1200,"Cooking Service":700};
+
+function show(id){
+  document.querySelectorAll('section').forEach(s=>s.classList.add('hidden'));
+  document.getElementById(id).classList.remove('hidden');
+}
+
+function getReviews(){return JSON.parse(localStorage.getItem('reviews')||"[]")}
+function saveReviews(d){localStorage.setItem('reviews',JSON.stringify(d))}
+
+function authUser(e){
+  e.preventDefault();
+  currentUser=user.value;
+  currentEmail=email.value;
+  show('services');
+}
+
+function logout(){location.reload()}
+
+function chooseService(service){
+  selectedService=service;
+  const now=new Date();
+  now.setMinutes(now.getMinutes()-now.getTimezoneOffset());
+  date.value=now.toISOString().slice(0,16);
+  priceBox.textContent=`Service Cost: ₹${prices[service]}`;
+  show('booking');
+}
+
+function confirmBooking(e){
+  e.preventDefault();
+  successMsg.textContent=`${selectedService} booked successfully!`;
+  show('success');
+}
+
+function openReviewForm(){show('reviewForm')}
+
+function submitReview(e){
+  e.preventDefault();
+  const r={user:currentUser,stars:rating.value,text:reviewText.value};
+  const db=getReviews(); db.push(r); saveReviews(db);
+  openReviews();
+}
+
+function openReviews(){
+  const db=getReviews();
+  reviewList.innerHTML=db.map(r=>
+    `<div class="review-card"><b>${r.user}</b><div class="stars">${r.stars}</div>${r.text}</div>`
+  ).join('');
+  show('reviews');
+}
+</script>
+
+</body>
+</html>
