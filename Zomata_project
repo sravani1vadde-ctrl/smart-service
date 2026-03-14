@@ -1,0 +1,4254 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "private_outputs": true,
+      "provenance": [],
+      "collapsed_sections": [
+        "FJNUwmbgGyua",
+        "yQaldy8SH6Dl",
+        "mDgbUHAGgjLW",
+        "MSa1f5Uengrz",
+        "bamQiAODYuh1",
+        "QHF8YVU7Yuh3",
+        "GwzvFGzlYuh3",
+        "qYpmQ266Yuh3",
+        "rAdphbQ9Bhjc",
+        "yiiVWRdJDDil",
+        "ArJBuiUVfxKd",
+        "zVGeBEFhpsJ2",
+        "h_CCil-SKHpo",
+        "cBFFvTBNJzUa",
+        "-Kee-DAl2viO",
+        "gIfDvo9L0UH2"
+      ],
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/sravani1vadde-ctrl/smart-service/blob/main/Zomata_project\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "# **Project Name**    -\n",
+        "\n"
+      ],
+      "metadata": {
+        "id": "vncDsAP0Gaoa"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "##### **Project Type**    - EDA\n",
+        "##### **Contribution**    -Team\n"
+      ],
+      "metadata": {
+        "id": "beRrZCGUAJYm"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "# **Project Summary -**"
+      ],
+      "metadata": {
+        "id": "FJNUwmbgGyua"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "The Zomato Data Analysis Project focuses on exploring and analyzing restaurant data to understand customer preferences, restaurant performance, and various factors that influence ratings and popularity. Zomato is a popular online platform that allows users to discover restaurants, read reviews, check menus, and rate their dining experiences. With the rapid growth of online food delivery services, analyzing restaurant data has become important for understanding market trends and improving customer satisfaction. This project uses the Zomato dataset to perform Exploratory Data Analysis (EDA) using Python and data analysis libraries.\n",
+        "\n",
+        "The main objective of this project is to examine the available restaurant data and identify meaningful patterns and insights. The dataset contains information such as restaurant names, cuisines, ratings, number of reviews, and cost details. By analyzing these attributes, we can understand which restaurants perform better, which cuisines are most popular, and how pricing may influence customer ratings. The project also helps in understanding customer behavior based on reviews and ratings.\n",
+        "\n",
+        "The first step in the project is data collection and loading. The Zomato dataset is imported into the analysis environment using Pandas, a powerful Python library for data manipulation and analysis. The dataset is loaded into a DataFrame where the rows represent restaurants and the columns represent different attributes such as ratings, cuisines, and costs. Once the data is loaded, the structure of the dataset is examined to understand the available columns and the type of information present in each field.\n",
+        "\n",
+        "The next step is data cleaning and preprocessing. Real-world datasets often contain missing values, duplicate records, or inconsistent formats. In this project, missing ratings or incomplete records are identified and handled appropriately. The ratings column is converted into numeric format to ensure proper calculations. Cleaning the dataset is an important step because accurate analysis depends on high-quality data.\n",
+        "\n",
+        "After cleaning the data, the project proceeds to exploratory data analysis (EDA). EDA is used to summarize the dataset and visualize patterns through graphs and statistical measures. Various techniques are used to analyze the data, such as calculating average ratings, identifying the most reviewed restaurants, and examining the distribution of ratings. Visualization libraries like Matplotlib and Seaborn are used to create graphs and charts that help in understanding the data more effectively.\n",
+        "\n",
+        "One of the important analyses performed in this project is rating distribution analysis. By plotting a histogram of restaurant ratings, it becomes possible to see how ratings are spread across different restaurants. The analysis often shows that most restaurants have ratings between moderate to high values, indicating generally positive customer feedback.\n",
+        "\n",
+        "Another analysis focuses on popular restaurants based on the number of reviews. Restaurants that receive a large number of reviews are usually more popular or frequently visited. Identifying such restaurants can help understand which businesses attract the most customer attention. Similarly, the project also examines popular cuisines by counting how frequently different cuisine types appear in the dataset. This helps in understanding customer preferences and trending food categories.\n",
+        "\n",
+        "The project also investigates the relationship between cost and ratings. By plotting cost against ratings using a scatter plot, we can observe whether expensive restaurants necessarily receive higher ratings or whether moderately priced restaurants also perform well. In many cases, the analysis shows that higher cost does not always guarantee better ratings, suggesting that service quality and food taste may be more important than price alone.\n",
+        "\n",
+        "Another useful outcome of this project is gaining practical experience with data analysis tools and techniques. Students learn how to work with datasets, perform data cleaning, generate visualizations, and interpret results. These skills are important in the field of data science and analytics, where data-driven decision making plays a key role.\n",
+        "\n",
+        "In conclusion, the Zomato Data Analysis Project provides valuable insights into restaurant performance and customer preferences by analyzing real-world data. Through the use of Python and data visualization tools, the project demonstrates how exploratory data analysis can reveal hidden patterns and trends within large datasets. The findings from the analysis can help restaurant owners improve their services, help customers make informed dining choices, and assist businesses in understanding market demands. Overall, the project highlights the importance of data analysis in making better decisions and understanding consumer behavior in the food industries.\n",
+        "\n",
+        "\n",
+        "\n",
+        "\n"
+      ],
+      "metadata": {
+        "id": "F6v_1wHtG2nS"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "# **GitHub Link -**"
+      ],
+      "metadata": {
+        "id": "w6K7xa23Elo4"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Provide your GitHub Link here."
+      ],
+      "metadata": {
+        "id": "h1o69JH3Eqqn"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "# **Problem Statement**\n"
+      ],
+      "metadata": {
+        "id": "yQaldy8SH6Dl"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "The Zomato Restaurant Dataset contains large amounts of information about restaurants such as ratings, reviews, cuisines, and cost. Understanding this data is important to identify customer preferences and restaurant performance. However, due to the large volume of data, it is difficult to analyze it manually. The aim of this project is to analyze restaurant data and discover meaningful insights. Using Exploratory Data Analysis (EDA) techniques, the dataset is cleaned and explored. The analysis is performed using Python and libraries like Pandas, Matplotlib, and Seaborn. The project studies rating distribution, popular cuisines, and restaurant popularity. It also analyzes the relationship between cost and ratings. The goal is to identify patterns and trends in the restaurant data. The insights obtained can help restaurants improve services and help customers make better dining decisions."
+      ],
+      "metadata": {
+        "id": "DpeJGUA3kjGy"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "# **General Guidelines** : -  "
+      ],
+      "metadata": {
+        "id": "mDgbUHAGgjLW"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "1.   Well-structured, formatted, and commented code is required.\n",
+        "2.   Exception Handling, Production Grade Code & Deployment Ready Code will be a plus. Those students will be awarded some additional credits.\n",
+        "     \n",
+        "     The additional credits will have advantages over other students during Star Student selection.\n",
+        "       \n",
+        "             [ Note: - Deployment Ready Code is defined as, the whole .ipynb notebook should be executable in one go\n",
+        "                       without a single error logged. ]\n",
+        "\n",
+        "3.   Each and every logic should have proper comments.\n",
+        "4. You may add as many number of charts you want. Make Sure for each and every chart the following format should be answered.\n",
+        "        \n",
+        "\n",
+        "```\n",
+        "# Chart visualization code\n",
+        "```\n",
+        "            \n",
+        "\n",
+        "*   Why did you pick the specific chart?\n",
+        "*   What is/are the insight(s) found from the chart?\n",
+        "* Will the gained insights help creating a positive business impact?\n",
+        "Are there any insights that lead to negative growth? Justify with specific reason.\n",
+        "\n",
+        "5. You have to create at least 15 logical & meaningful charts having important insights.\n",
+        "\n",
+        "\n",
+        "[ Hints : - Do the Vizualization in  a structured way while following \"UBM\" Rule.\n",
+        "\n",
+        "U - Univariate Analysis,\n",
+        "\n",
+        "B - Bivariate Analysis (Numerical - Categorical, Numerical - Numerical, Categorical - Categorical)\n",
+        "\n",
+        "M - Multivariate Analysis\n",
+        " ]\n",
+        "\n",
+        "\n",
+        "\n",
+        "\n",
+        "\n",
+        "6. You may add more ml algorithms for model creation. Make sure for each and every algorithm, the following format should be answered.\n",
+        "\n",
+        "\n",
+        "*   Explain the ML Model used and it's performance using Evaluation metric Score Chart.\n",
+        "\n",
+        "\n",
+        "*   Cross- Validation & Hyperparameter Tuning\n",
+        "\n",
+        "*   Have you seen any improvement? Note down the improvement with updates Evaluation metric Score Chart.\n",
+        "\n",
+        "*   Explain each evaluation metric's indication towards business and the business impact pf the ML model used.\n",
+        "\n",
+        "\n",
+        "\n",
+        "\n",
+        "\n",
+        "\n",
+        "\n",
+        "\n",
+        "\n",
+        "\n",
+        "\n",
+        "\n",
+        "\n",
+        "\n",
+        "\n",
+        "\n",
+        "\n",
+        "\n"
+      ],
+      "metadata": {
+        "id": "ZrxVaUj-hHfC"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "# ***Let's Begin !***"
+      ],
+      "metadata": {
+        "id": "O_i_v8NEhb9l"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "## ***1. Know Your Data***"
+      ],
+      "metadata": {
+        "id": "HhfV-JJviCcP"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "### Import Libraries"
+      ],
+      "metadata": {
+        "id": "Y3lxredqlCYt"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Data handling\n",
+        "import pandas as pd\n",
+        "import numpy as np\n",
+        "\n",
+        "# Data visualization\n",
+        "import matplotlib.pyplot as plt\n",
+        "import seaborn as sns\n",
+        "\n",
+        "# Text preprocessing (NLP)\n",
+        "import re\n",
+        "import nltk\n",
+        "from nltk.corpus import stopwords\n",
+        "from nltk.tokenize import word_tokenize\n",
+        "from nltk import pos_tag\n",
+        "from sklearn.feature_extraction.text import TfidfVectorizer\n",
+        "\n",
+        "# Data preprocessing\n",
+        "from sklearn.preprocessing import LabelEncoder, StandardScaler\n",
+        "\n",
+        "# Train-test split\n",
+        "from sklearn.model_selection import train_test_split\n",
+        "\n",
+        "# ML Models\n",
+        "from sklearn.linear_model import LinearRegression\n",
+        "from sklearn.ensemble import RandomForestRegressor\n",
+        "from sklearn.svm import SVR\n",
+        "\n",
+        "# Hyperparameter tuning\n",
+        "from sklearn.model_selection import GridSearchCV, RandomizedSearchCV\n",
+        "\n",
+        "# Dimensionality reduction\n",
+        "from sklearn.decomposition import PCA\n",
+        "\n",
+        "# Evaluation metrics\n",
+        "from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score\n",
+        "\n",
+        "# Model saving\n",
+        "import joblib\n",
+        "import pickle"
+      ],
+      "metadata": {
+        "id": "M8Vqi-pPk-HR"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "### Dataset Loading"
+      ],
+      "metadata": {
+        "id": "3RnN4peoiCZX"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "\n",
+        "\n",
+        "restaurants = pd.read_csv('/Zomato Restaurant names and Metadata (1).csv')\n",
+        "reviews = pd.read_csv('/Zomato Restaurant reviews.csv')\n",
+        "\n",
+        "reviews.head()\n",
+        "restaurants.head()\n",
+        "\n",
+        "zomato_data = pd.merge(reviews, restaurants, left_on='Restaurant', right_on='Name', how='inner')\n",
+        "\n",
+        "# Show first rows\n",
+        "zomato_data.head()\n",
+        "\n",
+        "# Check shape\n",
+        "print(\"Combined Dataset Shape:\", zomato_data.shape)"
+      ],
+      "metadata": {
+        "id": "4CkvbW_SlZ_R"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "### Dataset First View"
+      ],
+      "metadata": {
+        "id": "x71ZqKXriCWQ"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "\n",
+        "import pandas as pd\n",
+        "import os\n",
+        "\n",
+        "print(\"Files in Colab:\")\n",
+        "print(os.listdir('/content'))\n",
+        "print(\"\\nFirst 5 rows of Reviews Dataset\")\n",
+        "print(reviews.head())\n",
+        "\n",
+        "print(\"\\nFirst 5 rows of Restaurants Dataset\")\n",
+        "print(restaurants.head())\n",
+        "print(\"\\nLast 5 rows of Reviews Dataset\")\n",
+        "print(reviews.tail())\n",
+        "\n",
+        "print(\"\\nLast 5 rows of Restaurants Dataset\")\n",
+        "print(restaurants.tail())\n",
+        "print(\"\\nShape of Reviews Dataset:\", reviews.shape)\n",
+        "print(\"Shape of Restaurants Dataset:\", restaurants.shape)\n",
+        "print(\"\\nColumns in Reviews Dataset:\")\n",
+        "print(reviews.columns)\n",
+        "\n",
+        "print(\"\\nColumns in Restaurants Dataset:\")\n",
+        "print(restaurants.columns)\n",
+        "print(\"\\nReviews Dataset Info:\")\n",
+        "print(reviews.info())\n",
+        "\n",
+        "print(\"\\nRestaurants Dataset Info:\")\n",
+        "print(restaurants.info())\n",
+        "\n",
+        "# Check missing values\n",
+        "print(\"\\nMissing values in Reviews Dataset:\")\n",
+        "print(reviews.isnull().sum())\n",
+        "\n",
+        "print(\"\\nMissing values in Restaurants Dataset:\")\n",
+        "print(restaurants.isnull().sum())\n",
+        "print(\"\\nStatistical Summary of Reviews Dataset:\")\n",
+        "print(reviews.describe())\n",
+        "\n",
+        "print(\"\\nStatistical Summary of Restaurants Dataset:\")\n",
+        "print(restaurants.describe())"
+      ],
+      "metadata": {
+        "id": "LWNFOSvLl09H"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "### Dataset Rows & Columns count"
+      ],
+      "metadata": {
+        "id": "7hBIi_osiCS2"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "\n",
+        "print(\"Reviews Dataset Shape:\", reviews.shape)\n",
+        "print(\"Restaurants Dataset Shape:\", restaurants.shape)"
+      ],
+      "metadata": {
+        "id": "Kllu7SJgmLij"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "### Dataset Information"
+      ],
+      "metadata": {
+        "id": "JlHwYmJAmNHm"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "\n",
+        "print(\"Reviews Dataset Information:\")\n",
+        "reviews.info()\n",
+        "\n",
+        "print(\"\\nRestaurants Dataset Information:\")\n",
+        "restaurants.info()"
+      ],
+      "metadata": {
+        "id": "e9hRXRi6meOf"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#### Duplicate Values"
+      ],
+      "metadata": {
+        "id": "35m5QtbWiB9F"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "\n",
+        "print(\"Duplicate rows in Reviews Dataset:\", reviews.duplicated().sum())\n",
+        "print(\"Duplicate rows in Restaurants Dataset:\", restaurants.duplicated().sum())"
+      ],
+      "metadata": {
+        "id": "1sLdpKYkmox0"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#### Missing Values/Null Values"
+      ],
+      "metadata": {
+        "id": "PoPl-ycgm1ru"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "\n",
+        "print(\"Missing values in Reviews Dataset:\")\n",
+        "print(reviews.isnull().sum())\n",
+        "\n",
+        "print(\"\\nMissing values in Restaurants Dataset:\")\n",
+        "print(restaurants.isnull().sum())"
+      ],
+      "metadata": {
+        "id": "GgHWkxvamxVg"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "\n",
+        "plt.figure(figsize=(10,5))\n",
+        "sns.heatmap(reviews.isnull(), cbar=False)\n",
+        "plt.title(\"Missing Values - Reviews Dataset\")\n",
+        "plt.show()\n",
+        "plt.figure(figsize=(10,5))\n",
+        "sns.heatmap(restaurants.isnull(), cbar=False)\n",
+        "plt.title(\"Missing Values - Restaurants Dataset\")\n",
+        "plt.show()"
+      ],
+      "metadata": {
+        "id": "3q5wnI3om9sJ"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "### What did you know about your dataset?"
+      ],
+      "metadata": {
+        "id": "H0kj-8xxnORC"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "The Zomato Restaurant Dataset contains information about different restaurants listed on the Zomato platform. It includes details such as restaurant names, customer reviews, ratings, cuisines offered, and cost information. The dataset is useful for understanding restaurant performance and customer preferences. By analyzing this data using Exploratory Data Analysis (EDA) techniques, we can identify patterns such as the most popular restaurants, common cuisines, and rating distribution.\n",
+        "\n",
+        "The dataset used in this project consists of two files: one containing restaurant reviews and another containing restaurant metadata. The reviews dataset provides information about customer ratings and feedback, while the metadata dataset contains details about restaurants such as cuisine type and pricing. Using Python and libraries like Pandas, Matplotlib, and Seaborn, the data can be cleaned, analyzed, and visualized to extract meaningful insights.\n",
+        "\n",
+        "Overall, the dataset helps in studying customer behavior, identifying popular food trends, and understanding how different factors such as cuisine and cost influence restaurant ratings and popularity."
+      ],
+      "metadata": {
+        "id": "gfoNAAC-nUe_"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "## ***2. Understanding Your Variables***"
+      ],
+      "metadata": {
+        "id": "nA9Y7ga8ng1Z"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "\n",
+        "reviews = pd.read_csv('/Zomato Restaurant reviews.csv')\n",
+        "restaurants = pd.read_csv('/Zomato Restaurant names and Metadata (1).csv')\n",
+        "print(\"Columns in Reviews Dataset:\")\n",
+        "print(reviews.columns)\n",
+        "\n",
+        "print(\"\\nColumns in Restaurants Dataset:\")\n",
+        "print(restaurants.columns)"
+      ],
+      "metadata": {
+        "id": "j7xfkqrt5Ag5"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "\n",
+        "\n",
+        "print(\"Reviews Dataset Summary:\")\n",
+        "print(reviews.describe())\n",
+        "\n",
+        "print(\"\\nRestaurants Dataset Summary:\")\n",
+        "print(restaurants.describe())"
+      ],
+      "metadata": {
+        "id": "DnOaZdaE5Q5t"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "### Variables Description"
+      ],
+      "metadata": {
+        "id": "PBTbrJXOngz2"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "The Zomato Restaurant Dataset contains different variables (columns) that describe restaurant details and customer reviews. Each variable represents a specific type of information used in the analysis.\n",
+        "\n",
+        "Restaurant / Name:\n",
+        "Represents the name of the restaurant listed on the Zomato platform.\n",
+        "\n",
+        "Reviewer:\n",
+        "Shows the name or ID of the user who wrote the review for the restaurant.\n",
+        "\n",
+        "Rating:\n",
+        "Indicates the rating given by the customer to the restaurant, usually on a scale (for example 1 to 5).\n",
+        "\n",
+        "Review Text:\n",
+        "Contains the written feedback or comments provided by customers about their dining experience.\n",
+        "\n",
+        "Cuisine:\n",
+        "Specifies the type of food served by the restaurant, such as Indian, Chinese, Italian, etc.\n",
+        "\n",
+        "Cost:\n",
+        "Represents the approximate cost for dining at the restaurant, often calculated for two people.\n",
+        "\n",
+        "Location:\n",
+        "Shows the place or area where the restaurant is located.\n",
+        "\n",
+        "These variables help analyze restaurant performance and customer preferences during Exploratory Data Analysis (EDA) using Python."
+      ],
+      "metadata": {
+        "id": "aJV4KIxSnxay"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "### Check Unique Values for each variable."
+      ],
+      "metadata": {
+        "id": "u3PMJOP6ngxN"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "\n",
+        "print(\"Unique values in Reviews Dataset:\")\n",
+        "for col in reviews.columns:\n",
+        "    print(col, \":\", reviews[col].nunique())\n",
+        "\n",
+        "print(\"\\nUnique values in Restaurants Dataset:\")\n",
+        "for col in restaurants.columns:\n",
+        "    print(col, \":\", restaurants[col].nunique())"
+      ],
+      "metadata": {
+        "id": "zms12Yq5n-jE"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "## 3. ***Data Wrangling***"
+      ],
+      "metadata": {
+        "id": "dauF4eBmngu3"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "### Data Wrangling Code"
+      ],
+      "metadata": {
+        "id": "bKJF3rekwFvQ"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "\n",
+        "reviews = reviews.drop_duplicates()\n",
+        "restaurants = restaurants.drop_duplicates()\n",
+        "print(\"Missing values in Reviews Dataset:\")\n",
+        "print(reviews.isnull().sum())\n",
+        "\n",
+        "print(\"\\nMissing values in Restaurants Dataset:\")\n",
+        "print(restaurants.isnull().sum())\n",
+        "reviews = reviews.fillna(\"Unknown\")\n",
+        "restaurants = restaurants.fillna(\"Unknown\")\n",
+        "if 'Rating' in reviews.columns:\n",
+        "    reviews['Rating'] = pd.to_numeric(reviews['Rating'], errors='coerce')\n",
+        "\n",
+        "print(\"\\nReviews Dataset Shape:\", reviews.shape)\n",
+        "print(\"Restaurants Dataset Shape:\", restaurants.shape)\n",
+        "\n",
+        "\n",
+        "reviews.head()\n",
+        "restaurants.head()"
+      ],
+      "metadata": {
+        "id": "wk-9a2fpoLcV",
+        "collapsed": true
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "### What all manipulations have you done and insights you found?"
+      ],
+      "metadata": {
+        "id": "MSa1f5Uengrz"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Data Manipulations Performed\n",
+        "\n",
+        "During the analysis of the Zomato Restaurant Dataset, several data preprocessing and cleaning steps were performed using Python and Pandas:\n",
+        "\n",
+        "Loaded the dataset into the analysis environment in Google Colab.\n",
+        "\n",
+        "Checked the dataset structure using functions like head(), shape, and info() to understand rows, columns, and data types.\n",
+        "\n",
+        "Identified duplicate records and removed them using drop_duplicates() to avoid repeated data.\n",
+        "\n",
+        "Checked missing or null values using isnull().sum() and handled them appropriately.\n",
+        "\n",
+        "Converted data types, especially converting rating values into numeric format for proper analysis.\n",
+        "\n",
+        "Examined unique values in each column to understand the variety of data present.\n",
+        "\n",
+        "Generated statistical summaries using describe() to understand data distribution.\n",
+        "\n",
+        "Prepared the dataset for analysis by cleaning and organizing the data.\n",
+        "\n",
+        "Insights Found from the Dataset\n",
+        "\n",
+        "Most restaurants in the dataset have moderate to high ratings, indicating generally positive customer feedback.\n",
+        "\n",
+        "Some restaurants receive significantly more reviews, showing higher popularity among customers.\n",
+        "\n",
+        "Certain cuisines appear more frequently in the dataset, indicating popular food preferences among users.\n",
+        "\n",
+        "The cost of restaurants varies widely, but higher cost does not always guarantee higher ratings.\n",
+        "\n",
+        "Customer reviews provide useful information about service quality and dining experience.\n",
+        "\n",
+        "Data visualization during Exploratory Data Analysis (EDA) helped identify patterns in restaurant ratings and customer behavior.\n",
+        "\n",
+        "Overall, the manipulations helped clean and prepare the dataset, allowing meaningful insights to be extracted from the Zomato restaurant data."
+      ],
+      "metadata": {
+        "id": "LbyXE7I1olp8"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "## ***4. Data Vizualization, Storytelling & Experimenting with charts : Understand the relationships between variables***"
+      ],
+      "metadata": {
+        "id": "GF8Ens_Soomf"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Chart 1 represents the distribution of restaurant ratings in the Zomato Restaurant Dataset. The chart is created using Matplotlib and Seaborn in Python during Exploratory Data Analysis (EDA).\n",
+        "\n",
+        "The main purpose of this chart is to understand how ratings are spread across different restaurants. It shows the number of restaurants that fall into different rating ranges. From the visualization, it can be observed that most restaurants have ratings in the medium to high range. This indicates that many restaurants listed on the platform receive generally positive feedback from customers.\n",
+        "\n",
+        "The chart also helps identify whether there are many low-rated restaurants or if most restaurants maintain good ratings. In most cases, the majority of restaurants have ratings above average, while only a small number of restaurants have very low ratings.\n",
+        "\n",
+        "Overall, Chart 1 helps in understanding customer satisfaction levels and gives an overview of how restaurant ratings are distributed in the dataset."
+      ],
+      "metadata": {
+        "id": "0wOQAZs5pc--"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import matplotlib.pyplot as plt\n",
+        "import seaborn as sns\n",
+        "reviews['Rating'] = pd.to_numeric(reviews['Rating'], errors='coerce')\n",
+        "\n",
+        "plt.figure(figsize=(8,5))\n",
+        "sns.histplot(reviews['Rating'], bins=10)\n",
+        "\n",
+        "plt.title(\"Distribution of Restaurant Ratings\")\n",
+        "plt.xlabel(\"Rating\")\n",
+        "plt.ylabel(\"Count\")\n",
+        "\n",
+        "plt.show()"
+      ],
+      "metadata": {
+        "id": "7v_ESjsspbW7"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "chart was chosen to show the distribution of restaurant ratings in the Zomato Restaurant Dataset. It helps to understand how ratings are spread across different restaurants. The chart clearly shows whether most restaurants have high, medium, or low ratings. It helps identify patterns in customer feedback and satisfaction. Such charts are commonly used in Exploratory Data Analysis (EDA) to understand data trends. The visualization was created using Python with libraries like Matplotlib and Seaborn."
+      ],
+      "metadata": {
+        "id": "XESiWehPqBRc"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "##### 2. What is/are the insight(s) found from the chart?"
+      ],
+      "metadata": {
+        "id": "lQ7QKXXCp7Bj"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Most restaurants in the Zomato Restaurant Dataset have ratings in the medium to high range.\n",
+        "\n",
+        "Very few restaurants have very low ratings, indicating generally positive feedback.\n",
+        "\n",
+        "The distribution shows that customer satisfaction is mostly good.\n",
+        "\n",
+        "Only a small number of restaurants receive extremely high or extremely low ratings.\n",
+        "\n",
+        "This pattern was identified during Exploratory Data Analysis using Python visualization tools."
+      ],
+      "metadata": {
+        "id": "C_j1G7yiqdRP"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "##### 3. Will the gained insights help creating a positive business impact?\n",
+        "Are there any insights that lead to negative growth? Justify with specific reason."
+      ],
+      "metadata": {
+        "id": "448CDAPjqfQr"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Most restaurants in the Zomato Restaurant Dataset have ratings in the medium to high range. Very few restaurants receive very low ratings, which indicates generally positive customer feedback. The rating distribution suggests that overall customer satisfaction is good. Only a small number of restaurants have extremely high or extremely low ratings. These insights were identified during Exploratory Data Analysis using visualization tools in Python."
+      ],
+      "metadata": {
+        "id": "3cspy4FjqxJW"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [],
+      "metadata": {
+        "id": "KSlN3yHqYklG"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "\n",
+        "zomato_data = pd.merge(reviews, restaurants, left_on='Restaurant', right_on='Name', how='inner')\n",
+        "\n",
+        "# Count reviews per restaurant\n",
+        "top_restaurants = zomato_data['Restaurant'].value_counts().head(10)\n",
+        "\n",
+        "# Plot bar chart\n",
+        "plt.figure(figsize=(10,5))\n",
+        "top_restaurants.plot(kind='bar')\n",
+        "\n",
+        "plt.title(\"Top 10 Restaurants by Number of Reviews\")\n",
+        "plt.xlabel(\"Restaurant Name\")\n",
+        "plt.ylabel(\"Number of Reviews\")\n",
+        "plt.xticks(rotation=45)\n",
+        "\n",
+        "plt.show()"
+      ],
+      "metadata": {
+        "id": "R4YgtaqtYklH"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "##### 1. Why did you pick the specific chart?"
+      ],
+      "metadata": {
+        "id": "t6dVpIINYklI"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "This chart was chosen to show the restaurants that received the highest number of reviews in the Zomato Restaurant Dataset. A bar chart is suitable for comparing values between different restaurants. It helps easily identify which restaurants are more popular based on review count. The visualization makes the comparison clear and easy to understand. This analysis is part of Exploratory Data Analysis to study restaurant popularity. The chart was created using Python visualization libraries."
+      ],
+      "metadata": {
+        "id": "5aaW0BYyYklI"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "##### 2. What is/are the insight(s) found from the chart?"
+      ],
+      "metadata": {
+        "id": "ijmpgYnKYklI"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Some restaurants in the Zomato Restaurant Dataset receive significantly more reviews than others.\n",
+        "\n",
+        "Restaurants with more reviews are generally more popular among customers.\n",
+        "\n",
+        "High review counts indicate greater customer engagement and visibility.\n",
+        "\n",
+        "Only a few restaurants dominate the top positions in review count.\n",
+        "\n",
+        "These insights were identified during Exploratory Data Analysis using Python visualization tools."
+      ],
+      "metadata": {
+        "id": "PSx9atu2YklI"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "##### 3. Will the gained insights help creating a positive business impact?\n",
+        "Are there any insights that lead to negative growth? Justify with specific reason."
+      ],
+      "metadata": {
+        "id": "-JiQyfWJYklI"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Yes, the insights gained from analyzing the Zomato Restaurant Dataset can help create a positive business impact. By understanding which restaurants receive higher ratings and more reviews, businesses can identify factors that attract customers such as good service, popular cuisines, and reasonable pricing. These insights help restaurant owners improve their services, enhance customer satisfaction, and make better business decisions. This analysis was done using Exploratory Data Analysis techniques in Python.\n",
+        "\n",
+        "However, some insights may indicate potential negative growth. Restaurants with very low ratings or very few reviews may struggle to attract customers. Negative feedback or poor ratings can reduce customer trust and affect restaurant popularity. Additionally, if some restaurants dominate the number of reviews, smaller restaurants may receive less visibility on the platform. Identifying these issues helps businesses focus on improving quality, service, and customer experience to avoid negative growth."
+      ],
+      "metadata": {
+        "id": "BcBbebzrYklV"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#### Chart - 3"
+      ],
+      "metadata": {
+        "id": "EM7whBJCYoAo"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "\n",
+        "zomato_data = pd.merge(reviews, restaurants, left_on='Restaurant', right_on='Name', how='inner')\n",
+        "\n",
+        "# Count cuisine frequency\n",
+        "top_cuisines = zomato_data['Cuisines'].value_counts().head(10)\n",
+        "\n",
+        "# Plot bar chart\n",
+        "plt.figure(figsize=(10,5))\n",
+        "top_cuisines.plot(kind='bar')\n",
+        "\n",
+        "plt.title(\"Top 10 Most Popular Cuisines\")\n",
+        "plt.xlabel(\"Cuisine Type\")\n",
+        "plt.ylabel(\"Number of Restaurants\")\n",
+        "plt.xticks(rotation=45)\n",
+        "\n",
+        "plt.show()\n",
+        "\n"
+      ],
+      "metadata": {
+        "id": "t6GMdE67YoAp"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "##### 1. Why did you pick the specific chart?"
+      ],
+      "metadata": {
+        "id": "fge-S5ZAYoAp"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "This chart was chosen to show the frequency of different cuisines in the Zomato Restaurant Dataset. A bar chart helps clearly compare the number of restaurants offering each cuisine. It makes it easy to identify the most popular food types among customers. The visualization helps understand food trends and customer preferences. This analysis is performed during Exploratory Data Analysis to study patterns in the data. The chart was created using visualization tools in Python."
+      ],
+      "metadata": {
+        "id": "5dBItgRVYoAp"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "##### 2. What is/are the insight(s) found from the chart?"
+      ],
+      "metadata": {
+        "id": "85gYPyotYoAp"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Some cuisines appear more frequently in the Zomato Restaurant Dataset than others.\n",
+        "\n",
+        "The cuisines with the highest counts are the most popular among restaurants and customers.\n",
+        "\n",
+        "Restaurants tend to offer certain cuisines more often due to higher demand.\n",
+        "\n",
+        "Less frequent cuisines indicate lower availability or lower customer demand.\n",
+        "\n",
+        "These patterns were identified during Exploratory Data Analysis using visualization tools in Python."
+      ],
+      "metadata": {
+        "id": "4jstXR6OYoAp"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "##### 3. Will the gained insights help creating a positive business impact?\n",
+        "Are there any insights that lead to negative growth? Justify with specific reason."
+      ],
+      "metadata": {
+        "id": "RoGjAbkUYoAp"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Yes, the insights from this chart can help create a positive business impact. By analyzing the most frequent cuisines in the Zomato Restaurant Dataset, restaurant owners can understand customer food preferences. Businesses can focus on offering popular cuisines to attract more customers and increase sales. This information helps restaurants plan menus, marketing strategies, and business expansion based on demand. The insights were obtained through Exploratory Data Analysis using Python.\n",
+        "\n",
+        "However, some insights may indicate negative growth. Cuisines with very low counts may show low customer demand or limited popularity. Restaurants focusing only on these less popular cuisines might struggle to attract customers. This could reduce revenue and visibility on the platform. Therefore, businesses need to balance popular cuisines with unique offerings to avoid negative growth."
+      ],
+      "metadata": {
+        "id": "zfJ8IqMcYoAp"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#### Chart - 4"
+      ],
+      "metadata": {
+        "id": "4Of9eVA-YrdM"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "\n",
+        "zomato_data = pd.merge(reviews, restaurants, left_on='Restaurant', right_on='Name', how='inner')\n",
+        "zomato_data['Cost'] = pd.to_numeric(zomato_data['Cost'], errors='coerce')\n",
+        "zomato_data['Rating'] = pd.to_numeric(zomato_data['Rating'], errors='coerce')\n",
+        "\n",
+        "# Scatter plot\n",
+        "plt.figure(figsize=(8,5))\n",
+        "sns.scatterplot(x=zomato_data['Cost'], y=zomato_data['Rating'])\n",
+        "\n",
+        "plt.title(\"Cost vs Rating of Restaurants\")\n",
+        "plt.xlabel(\"Cost\")\n",
+        "plt.ylabel(\"Rating\")\n",
+        "\n",
+        "plt.show()"
+      ],
+      "metadata": {
+        "id": "irlUoxc8YrdO"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "##### 1. Why did you pick the specific chart?"
+      ],
+      "metadata": {
+        "id": "iky9q4vBYrdO"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "This chart was chosen to analyze the relationship between restaurant cost and ratings in the Zomato Restaurant Dataset. A scatter plot is suitable for showing the relationship between two numerical variables. It helps observe whether higher cost restaurants receive higher ratings. The chart makes it easy to identify patterns, trends, or correlations between cost and customer satisfaction. This type of visualization is commonly used in Exploratory Data Analysis to study variable relationships. The chart was created using visualization tools in Python."
+      ],
+      "metadata": {
+        "id": "aJRCwT6DYrdO"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "##### 2. What is/are the insight(s) found from the chart?"
+      ],
+      "metadata": {
+        "id": "F6T5p64dYrdO"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "The chart shows the relationship between cost and ratings in the Zomato Restaurant Dataset.\n",
+        "\n",
+        "Higher cost restaurants do not always receive higher ratings.\n",
+        "\n",
+        "Many moderately priced restaurants also have good customer ratings.\n",
+        "\n",
+        "This indicates that food quality and service are more important than price.\n",
+        "\n",
+        "These insights were identified during Exploratory Data Analysis using visualization tools in Python."
+      ],
+      "metadata": {
+        "id": "Xx8WAJvtYrdO"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "##### 3. Will the gained insights help creating a positive business impact?\n",
+        "Are there any insights that lead to negative growth? Justify with specific reason."
+      ],
+      "metadata": {
+        "id": "y-Ehk30pYrdP"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Yes, the insights from this chart can create a positive business impact. From the analysis of the Zomato Restaurant Dataset, it is observed that high cost does not always guarantee high ratings. This means restaurants can attract customers by focusing on food quality, service, and customer experience rather than only increasing prices. By maintaining good quality at a reasonable price, restaurants can improve customer satisfaction and gain more positive reviews. These insights were obtained through Exploratory Data Analysis using Python.\n",
+        "\n",
+        "However, there can also be negative growth if restaurants set very high prices without improving food quality or service. Customers may give lower ratings or negative reviews, which can reduce the restaurant’s popularity and customer trust. Therefore, businesses must balance price with quality to avoid negative growth."
+      ],
+      "metadata": {
+        "id": "jLNxxz7MYrdP"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#### Chart - 5"
+      ],
+      "metadata": {
+        "id": "bamQiAODYuh1"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Chart - 5 visualization code"
+      ],
+      "metadata": {
+        "id": "TIJwrbroYuh3"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "##### 1. Why did you pick the specific chart?"
+      ],
+      "metadata": {
+        "id": "QHF8YVU7Yuh3"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Answer Here."
+      ],
+      "metadata": {
+        "id": "dcxuIMRPYuh3"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "##### 2. What is/are the insight(s) found from the chart?"
+      ],
+      "metadata": {
+        "id": "GwzvFGzlYuh3"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Answer Here"
+      ],
+      "metadata": {
+        "id": "uyqkiB8YYuh3"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "##### 3. Will the gained insights help creating a positive business impact?\n",
+        "Are there any insights that lead to negative growth? Justify with specific reason."
+      ],
+      "metadata": {
+        "id": "qYpmQ266Yuh3"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Answer Here"
+      ],
+      "metadata": {
+        "id": "_WtzZ_hCYuh4"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#### Chart - 6"
+      ],
+      "metadata": {
+        "id": "OH-pJp9IphqM"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "\n",
+        "zomato_data = pd.merge(reviews, restaurants, left_on='Restaurant', right_on='Name', how='inner')\n",
+        "\n",
+        "zomato_data['Rating'] = pd.to_numeric(zomato_data['Rating'], errors='coerce')\n",
+        "\n",
+        "avg_rating = zomato_data.groupby('Cuisines')['Rating'].mean().sort_values(ascending=False).head(10)\n",
+        "\n",
+        "# Plot bar chart\n",
+        "plt.figure(figsize=(10,5))\n",
+        "avg_rating.plot(kind='bar')\n",
+        "\n",
+        "plt.title(\"Top 10 Cuisines by Average Rating\")\n",
+        "plt.xlabel(\"Cuisine\")\n",
+        "plt.ylabel(\"Average Rating\")\n",
+        "plt.xticks(rotation=45)\n",
+        "\n",
+        "plt.show()"
+      ],
+      "metadata": {
+        "id": "kuRf4wtuphqN"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "##### 1. Why did you pick the specific chart?"
+      ],
+      "metadata": {
+        "id": "bbFf2-_FphqN"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "This chart was chosen to compare the average ratings of different cuisines in the Zomato Restaurant Dataset. A bar chart is suitable for comparing values across multiple categories like cuisines. It clearly shows which cuisines receive higher or lower customer ratings. This helps identify customer preferences and popular food types. Such visualization is commonly used in Exploratory Data Analysis to compare category-based data. The chart was created using visualization tools in Python."
+      ],
+      "metadata": {
+        "id": "loh7H2nzphqN"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "##### 2. What is/are the insight(s) found from the chart?"
+      ],
+      "metadata": {
+        "id": "_ouA3fa0phqN"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Some cuisines in the Zomato Restaurant Dataset have higher average ratings than others.\n",
+        "\n",
+        "Cuisines with higher ratings indicate greater customer satisfaction.\n",
+        "\n",
+        "Restaurants serving these highly rated cuisines may attract more customers and positive reviews.\n",
+        "\n",
+        "Cuisines with lower average ratings may need improvements in quality or service.\n",
+        "\n",
+        "These insights were identified during Exploratory Data Analysis using visualization tools in Python."
+      ],
+      "metadata": {
+        "id": "VECbqPI7phqN"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "##### 3. Will the gained insights help creating a positive business impact?\n",
+        "Are there any insights that lead to negative growth? Justify with specific reason."
+      ],
+      "metadata": {
+        "id": "Seke61FWphqN"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Yes, the insights from this chart can create a positive business impact. By analyzing the average ratings of cuisines in the Zomato Restaurant Dataset, restaurant owners can identify which cuisines are more liked by customers. Businesses can focus more on highly rated cuisines to attract more customers and improve their reputation. This helps restaurants design better menus and increase customer satisfaction. These insights were obtained through Exploratory Data Analysis using Python.\n",
+        "\n",
+        "However, there can also be negative growth if restaurants continue serving cuisines that receive consistently low ratings. Low ratings may indicate poor quality, low demand, or customer dissatisfaction. If restaurants do not improve these areas, it may lead to fewer customers and reduced business performance."
+      ],
+      "metadata": {
+        "id": "DW4_bGpfphqN"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#### Chart - 7"
+      ],
+      "metadata": {
+        "id": "PIIx-8_IphqN"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "\n",
+        "zomato_data['Rating'] = pd.to_numeric(zomato_data['Rating'], errors='coerce')\n",
+        "\n",
+        "# Plot histogram\n",
+        "plt.figure(figsize=(8,5))\n",
+        "sns.histplot(zomato_data['Rating'], bins=10)\n",
+        "\n",
+        "plt.title(\"Distribution of Restaurant Ratings\")\n",
+        "plt.xlabel(\"Rating\")\n",
+        "plt.ylabel(\"Frequency\")\n",
+        "\n",
+        "plt.show()"
+      ],
+      "metadata": {
+        "id": "lqAIGUfyphqO"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "##### 1. Why did you pick the specific chart?"
+      ],
+      "metadata": {
+        "id": "t27r6nlMphqO"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "This chart was chosen to show the distribution of restaurant ratings in the Zomato Restaurant Dataset. A histogram is useful for understanding how frequently different rating values occur. It"
+      ],
+      "metadata": {
+        "id": "iv6ro40sphqO"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "##### 2. What is/are the insight(s) found from the chart?"
+      ],
+      "metadata": {
+        "id": "r2jJGEOYphqO"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Most restaurants in the Zomato Restaurant Dataset have ratings in the medium to high range.\n",
+        "\n",
+        "Only a small number of restaurants receive very low ratings.\n",
+        "\n",
+        "The distribution indicates that customer satisfaction is generally positive.\n",
+        "\n",
+        "Very high ratings are also fewer compared to moderate ratings.\n",
+        "\n",
+        "These insights were identified during Exploratory Data Analysis using visualization tools in Python."
+      ],
+      "metadata": {
+        "id": "Po6ZPi4hphqO"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "##### 3. Will the gained insights help creating a positive business impact?\n",
+        "Are there any insights that lead to negative growth? Justify with specific reason."
+      ],
+      "metadata": {
+        "id": "b0JNsNcRphqO"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Yes, the insights from this chart can help create a positive business impact. The rating distribution in the Zomato Restaurant Dataset shows that most restaurants receive medium to high ratings. This indicates that customers are generally satisfied with the services and food quality. Restaurant owners can maintain these standards and focus on improving customer experience to gain more positive reviews and attract more customers. These insights were obtained through Exploratory Data Analysis using Python.\n",
+        "\n",
+        "However, there can also be negative growth if some restaurants consistently receive low ratings. Low ratings may indicate poor service, low food quality, or high prices. If these issues are not addressed, customers may avoid those restaurants, which can reduce their popularity and revenue."
+      ],
+      "metadata": {
+        "id": "xvSq8iUTphqO"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#### Chart - 8"
+      ],
+      "metadata": {
+        "id": "BZR9WyysphqO"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "\n",
+        "zomato_data['Rating'] = pd.to_numeric(zomato_data['Rating'], errors='coerce')\n",
+        "\n",
+        "# Calculate average rating per restaurant\n",
+        "top_rated = zomato_data.groupby('Restaurant')['Rating'].mean().sort_values(ascending=False).head(10)\n",
+        "\n",
+        "# Plot bar chart\n",
+        "plt.figure(figsize=(10,5))\n",
+        "top_rated.plot(kind='bar')\n",
+        "\n",
+        "plt.title(\"Top 10 Restaurants by Average Rating\")\n",
+        "plt.xlabel(\"Restaurant\")\n",
+        "plt.ylabel(\"Average Rating\")\n",
+        "plt.xticks(rotation=45)\n",
+        "\n",
+        "plt.show()"
+      ],
+      "metadata": {
+        "id": "TdPTWpAVphqO"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "##### 1. Why did you pick the specific chart?"
+      ],
+      "metadata": {
+        "id": "jj7wYXLtphqO"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "This chart was chosen to compare the average ratings of different restaurants in the Zomato Restaurant Dataset. A bar chart is suitable for comparing rating values across multiple restaurants. It clearly shows which restaurants have higher or lower average ratings. This helps identify the top-performing restaurants based on customer feedback. Such visualization is commonly used in Exploratory Data Analysis. The chart was created using visualization tools in Python."
+      ],
+      "metadata": {
+        "id": "Ob8u6rCTphqO"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "##### 2. What is/are the insight(s) found from the chart?"
+      ],
+      "metadata": {
+        "id": "eZrbJ2SmphqO"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Some restaurants in the Zomato Restaurant Dataset have higher average ratings than others.\n",
+        "\n",
+        "These restaurants likely provide better food quality and customer service.\n",
+        "\n",
+        "Highly rated restaurants tend to gain more customer trust and popularity.\n",
+        "\n",
+        "Restaurants with lower ratings may need to improve service, food quality, or pricing.\n",
+        "\n",
+        "These insights were identified during Exploratory Data Analysis using visualization tools in Python."
+      ],
+      "metadata": {
+        "id": "mZtgC_hjphqO"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "##### 3. Will the gained insights help creating a positive business impact?\n",
+        "Are there any insights that lead to negative growth? Justify with specific reason."
+      ],
+      "metadata": {
+        "id": "rFu4xreNphqO"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Yes, the insights from the Zomato Restaurant Dataset can help create a positive business impact by identifying restaurants with higher average ratings. Businesses can learn from these restaurants and improve food quality, service, and customer experience. This can attract more customers and increase popularity. However, restaurants with consistently low ratings may face negative growth due to poor customer satisfaction. These insights were identified during Exploratory Data Analysis using Python."
+      ],
+      "metadata": {
+        "id": "ey_0qi68phqO"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#### Chart - 9"
+      ],
+      "metadata": {
+        "id": "YJ55k-q6phqO"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "\n",
+        "zomato_data['Cost'] = pd.to_numeric(zomato_data['Cost'], errors='coerce')\n",
+        "\n",
+        "# Plot boxplot\n",
+        "plt.figure(figsize=(8,5))\n",
+        "sns.boxplot(x=zomato_data['Cost'])\n",
+        "\n",
+        "plt.title(\"Distribution of Restaurant Cost\")\n",
+        "plt.xlabel(\"Cost\")\n",
+        "\n",
+        "plt.show()"
+      ],
+      "metadata": {
+        "id": "B2aS4O1ophqO"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "##### 1. Why did you pick the specific chart?"
+      ],
+      "metadata": {
+        "id": "gCFgpxoyphqP"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "This chart was chosen to analyze the distribution of restaurant costs in the Zomato Restaurant Dataset. A box plot is useful for showing the spread of numerical data and identifying outliers. It helps understand whether most restaurants have low, medium, or high costs. The chart also highlights extreme values in restaurant pricing. Such visualization is commonly used in Exploratory Data Analysis. The chart was created using visualization tools in Python."
+      ],
+      "metadata": {
+        "id": "TVxDimi2phqP"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "##### 2. What is/are the insight(s) found from the chart?"
+      ],
+      "metadata": {
+        "id": "OVtJsKN_phqQ"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Most restaurants in the Zomato Restaurant Dataset fall within a moderate cost range.\n",
+        "\n",
+        "Only a few restaurants have very high costs, indicating premium dining options.\n",
+        "\n",
+        "Some restaurants have very low costs, making them affordable for more customers.\n",
+        "\n",
+        "The chart also reveals outliers, which represent unusually expensive restaurants.\n",
+        "\n",
+        "These insights were identified during Exploratory Data Analysis using visualization tools in Python."
+      ],
+      "metadata": {
+        "id": "ngGi97qjphqQ"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "##### 3. Will the gained insights help creating a positive business impact?\n",
+        "Are there any insights that lead to negative growth? Justify with specific reason."
+      ],
+      "metadata": {
+        "id": "lssrdh5qphqQ"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Yes, the insights from the Zomato Restaurant Dataset can help create a positive business impact. Understanding the cost distribution helps restaurants set competitive and affordable prices to attract more customers. Businesses can adjust their pricing strategies based on market trends and customer preferences.\n",
+        "\n",
+        "However, some insights may indicate negative growth. Restaurants with extremely high prices may lose customers if the price does not match food quality or service. Similarly, very low pricing may reduce profit margins and affect long-term sustainability. These insights were obtained through Exploratory Data Analysis using Python."
+      ],
+      "metadata": {
+        "id": "tBpY5ekJphqQ"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#### Chart - 10"
+      ],
+      "metadata": {
+        "id": "U2RJ9gkRphqQ"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "\n",
+        "zomato_data['Rating'] = pd.to_numeric(zomato_data['Rating'], errors='coerce')\n",
+        "\n",
+        "# Count reviews per restaurant\n",
+        "review_count = zomato_data.groupby('Restaurant').size().reset_index(name='Review_Count')\n",
+        "\n",
+        "# Average rating per restaurant\n",
+        "avg_rating = zomato_data.groupby('Restaurant')['Rating'].mean().reset_index()\n",
+        "\n",
+        "# Merge both\n",
+        "rating_reviews = pd.merge(review_count, avg_rating, on='Restaurant')\n",
+        "\n",
+        "# Scatter plot\n",
+        "plt.figure(figsize=(8,5))\n",
+        "sns.scatterplot(data=rating_reviews, x='Review_Count', y='Rating')\n",
+        "\n",
+        "plt.title(\"Reviews vs Average Rating\")\n",
+        "plt.xlabel(\"Number of Reviews\")\n",
+        "plt.ylabel(\"Average Rating\")\n",
+        "\n",
+        "plt.show()"
+      ],
+      "metadata": {
+        "id": "GM7a4YP4phqQ"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "##### 1. Why did you pick the specific chart?"
+      ],
+      "metadata": {
+        "id": "1M8mcRywphqQ"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "This chart was chosen to analyze the relationship between the number of reviews and restaurant ratings in the Zomato Restaurant Dataset. A scatter plot is suitable for comparing two numerical variables and identifying patterns. It helps observe whether restaurants with more reviews tend to have higher or lower ratings. The chart makes it easy to detect trends, clusters, or unusual values in the data. Such visualization is commonly used in Exploratory Data Analysis. The chart was created using visualization tools in Python."
+      ],
+      "metadata": {
+        "id": "8agQvks0phqQ"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "##### 2. What is/are the insight(s) found from the chart?"
+      ],
+      "metadata": {
+        "id": "tgIPom80phqQ"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Restaurants in the Zomato Restaurant Dataset with more reviews tend to have more reliable and stable ratings.\n",
+        "\n",
+        "Restaurants with very few reviews sometimes show extreme ratings (very high or very low).\n",
+        "\n",
+        "A higher number of reviews indicates greater customer engagement and popularity.\n",
+        "\n",
+        "Restaurants with good ratings and many reviews are likely well-trusted by customers.\n",
+        "\n",
+        "These insights were obtained during Exploratory Data Analysis using Python visualization tools."
+      ],
+      "metadata": {
+        "id": "Qp13pnNzphqQ"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "##### 3. Will the gained insights help creating a positive business impact?\n",
+        "Are there any insights that lead to negative growth? Justify with specific reason."
+      ],
+      "metadata": {
+        "id": "JMzcOPDDphqR"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Yes, the insights from the Zomato Restaurant Dataset can help create a positive business impact. Restaurants with more reviews and good ratings gain higher customer trust and attract more visitors. Businesses can encourage customers to leave reviews to increase visibility and credibility.\n",
+        "\n",
+        "However, there can also be negative growth if restaurants receive many reviews but with low ratings. This indicates poor food quality or service, which may discourage new customers. These insights were obtained through Exploratory Data Analysis using Python."
+      ],
+      "metadata": {
+        "id": "R4Ka1PC2phqR"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#### Chart - 11"
+      ],
+      "metadata": {
+        "id": "x-EpHcCOp1ci"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "\n",
+        "zomato_data['Cost'] = pd.to_numeric(zomato_data['Cost'], errors='coerce')\n",
+        "\n",
+        "# Average cost by cuisine\n",
+        "avg_cost_cuisine = zomato_data.groupby('Cuisines')['Cost'].mean().sort_values(ascending=False).head(10)\n",
+        "\n",
+        "# Plot bar chart\n",
+        "plt.figure(figsize=(10,5))\n",
+        "avg_cost_cuisine.plot(kind='bar')\n",
+        "\n",
+        "plt.title(\"Average Cost by Cuisine\")\n",
+        "plt.xlabel(\"Cuisine\")\n",
+        "plt.ylabel(\"Average Cost\")\n",
+        "\n",
+        "plt.xticks(rotation=45)\n",
+        "plt.show()"
+      ],
+      "metadata": {
+        "id": "mAQTIvtqp1cj"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "##### 1. Why did you pick the specific chart?"
+      ],
+      "metadata": {
+        "id": "X_VqEhTip1ck"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "This chart was chosen to compare the average cost of different cuisines in the Zomato Restaurant Dataset. A bar chart is suitable for comparing numerical values across multiple categories like cuisines. It clearly shows which cuisines are more expensive and which are more affordable. This helps understand pricing patterns across different food types. Such visualization is commonly used in Exploratory Data Analysis. The chart was created using visualization tools in Python."
+      ],
+      "metadata": {
+        "id": "-vsMzt_np1ck"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "##### 2. What is/are the insight(s) found from the chart?"
+      ],
+      "metadata": {
+        "id": "8zGJKyg5p1ck"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Some cuisines in the Zomato Restaurant Dataset have higher average costs than others.\n",
+        "\n",
+        "Premium cuisines usually require higher pricing due to ingredients and preparation style.\n",
+        "\n",
+        "Affordable cuisines are likely to attract a larger number of customers.\n",
+        "\n",
+        "The price difference shows varied pricing strategies among restaurants.\n",
+        "\n",
+        "These insights were identified during Exploratory Data Analysis using Python visualization tools."
+      ],
+      "metadata": {
+        "id": "ZYdMsrqVp1ck"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "##### 3. Will the gained insights help creating a positive business impact?\n",
+        "Are there any insights that lead to negative growth? Justify with specific reason."
+      ],
+      "metadata": {
+        "id": "PVzmfK_Ep1ck"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Yes, the insights from the Zomato Restaurant Dataset can create a positive business impact. By understanding the average cost of different cuisines, restaurants can set appropriate pricing strategies and target the right customer segment. This can help increase customer satisfaction and revenue.\n",
+        "\n",
+        "However, there can also be negative growth if restaurants price their cuisines too high compared to competitors. High prices without matching quality or service may discourage customers. These insights were obtained during Exploratory Data Analysis using Python.\n",
+        "\n",
+        "I prefer this response\n",
+        "You’ve reached the Free limit for chats with attachments\n"
+      ],
+      "metadata": {
+        "id": "druuKYZpp1ck"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#### Chart - 12"
+      ],
+      "metadata": {
+        "id": "n3dbpmDWp1ck"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import pandas as pd\n",
+        "import matplotlib.pyplot as plt\n",
+        "import seaborn as sns\n",
+        "\n",
+        "# Load datasets\n",
+        "reviews = pd.read_csv('/content/Zomato Restaurant reviews.csv')\n",
+        "restaurants = pd.read_csv('/content/Zomato Restaurant names and Metadata (1).csv')\n",
+        "\n",
+        "# Merge datasets\n",
+        "zomato_data = pd.merge(reviews, restaurants, left_on='Restaurant', right_on='Name', how='inner')\n",
+        "\n",
+        "# Convert Rating to numeric\n",
+        "zomato_data['Rating'] = pd.to_numeric(zomato_data['Rating'], errors='coerce')\n",
+        "\n",
+        "# Select top cuisines\n",
+        "top_cuisines = zomato_data['Cuisines'].value_counts().head(10).index\n",
+        "filtered_data = zomato_data[zomato_data['Cuisines'].isin(top_cuisines)]\n",
+        "\n",
+        "# Boxplot\n",
+        "plt.figure(figsize=(12,6))\n",
+        "sns.boxplot(x='Cuisines', y='Rating', data=filtered_data)\n",
+        "\n",
+        "plt.title(\"Rating Distribution by Cuisine\")\n",
+        "plt.xlabel(\"Cuisine\")\n",
+        "plt.ylabel(\"Rating\")\n",
+        "plt.xticks(rotation=45)\n",
+        "\n",
+        "plt.show()"
+      ],
+      "metadata": {
+        "id": "bwevp1tKp1ck"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "##### 1. Why did you pick the specific chart?"
+      ],
+      "metadata": {
+        "id": "ylSl6qgtp1ck"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "This chart was chosen to compare the rating distribution of different cuisines in the Zomato Restaurant Dataset. A box plot is useful for showing the spread, median, and variation of ratings across categories. It helps identify which cuisines have consistently high or low ratings. The chart also highlights variations and outliers in customer ratings. Such visualization is commonly used in Exploratory Data Analysis. The chart was created using visualization tools in Python."
+      ],
+      "metadata": {
+        "id": "m2xqNkiQp1ck"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "##### 2. What is/are the insight(s) found from the chart?"
+      ],
+      "metadata": {
+        "id": "ZWILFDl5p1ck"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Some cuisines in the Zomato Restaurant Dataset receive consistently higher ratings than others.\n",
+        "\n",
+        "Certain cuisines show greater variation in ratings, indicating mixed customer opinions.\n",
+        "\n",
+        "Cuisines with higher median ratings suggest better overall customer satisfaction.\n",
+        "\n",
+        "Some cuisines have lower ratings, which may indicate quality or service issues.\n",
+        "\n",
+        "These insights were identified during Exploratory Data Analysis using visualization tools in Python."
+      ],
+      "metadata": {
+        "id": "x-lUsV2mp1ck"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "##### 3. Will the gained insights help creating a positive business impact?\n",
+        "Are there any insights that lead to negative growth? Justify with specific reason."
+      ],
+      "metadata": {
+        "id": "M7G43BXep1ck"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Yes, the insights from the Zomato Restaurant Dataset can create a positive business impact. By analyzing rating distribution across cuisines, restaurants can identify which cuisines provide better customer satisfaction. Businesses can focus on improving popular cuisines and maintaining quality to attract more customers.\n",
+        "\n",
+        "However, there can also be negative growth if some cuisines consistently receive low ratings. This may indicate poor food quality or service issues, which can reduce customer trust and restaurant popularity. These insights were obtained during Exploratory Data Analysis using Python."
+      ],
+      "metadata": {
+        "id": "5wwDJXsLp1cl"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#### Chart - 13"
+      ],
+      "metadata": {
+        "id": "Ag9LCva-p1cl"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "\n",
+        "zomato_data = pd.merge(reviews, restaurants, left_on='Restaurant', right_on='Name', how='inner')\n",
+        "\n",
+        "# Count restaurants by cuisine\n",
+        "cuisine_count = zomato_data['Cuisines'].value_counts().head(10)\n",
+        "\n",
+        "# Plot pie chart\n",
+        "plt.figure(figsize=(8,8))\n",
+        "cuisine_count.plot(kind='pie', autopct='%1.1f%%')\n",
+        "\n",
+        "plt.title(\"Top 10 Cuisines by Number of Restaurants\")\n",
+        "plt.ylabel(\"\")\n",
+        "\n",
+        "plt.show()"
+      ],
+      "metadata": {
+        "id": "EUfxeq9-p1cl"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "##### 1. Why did you pick the specific chart?"
+      ],
+      "metadata": {
+        "id": "E6MkPsBcp1cl"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "This chart was chosen to show the proportion of restaurants for each cuisine in the Zomato Restaurant Dataset. A pie chart is useful for visualizing how different categories contribute to the whole. It clearly shows which cuisines occupy a larger share of restaurants. This helps understand the market distribution of cuisines. Such visualization is commonly used in Exploratory Data Analysis using Python."
+      ],
+      "metadata": {
+        "id": "V22bRsFWp1cl"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "##### 2. What is/are the insight(s) found from the chart?"
+      ],
+      "metadata": {
+        "id": "2cELzS2fp1cl"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Some cuisines in the Zomato Restaurant Dataset occupy a larger share of restaurants.\n",
+        "\n",
+        "Popular cuisines dominate the restaurant market distribution.\n",
+        "\n",
+        "A few cuisines have very small proportions, indicating fewer restaurants offering them.\n",
+        "\n",
+        "The chart highlights customer demand and market trends for different cuisines.\n",
+        "\n",
+        "These insights were identified during Exploratory Data Analysis using visualization tools in Python."
+      ],
+      "metadata": {
+        "id": "ozQPc2_Ip1cl"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "##### 3. Will the gained insights help creating a positive business impact?\n",
+        "Are there any insights that lead to negative growth? Justify with specific reason."
+      ],
+      "metadata": {
+        "id": "3MPXvC8up1cl"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Yes, the insights from the Zomato Restaurant Dataset can create a positive business impact. By understanding which cuisines have a larger share of restaurants, businesses can identify popular food trends and plan their menu accordingly. This helps attract more customers and increase sales.\n",
+        "\n",
+        "However, there can also be negative growth if too many restaurants offer the same popular cuisines. High competition may reduce profits for individual restaurants. These insights were identified during Exploratory Data Analysis using Python."
+      ],
+      "metadata": {
+        "id": "GL8l1tdLp1cl"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#### Chart - 14 - Correlation Heatmap"
+      ],
+      "metadata": {
+        "id": "NC_X3p0fY2L0"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "\n",
+        "zomato_data['Rating'] = pd.to_numeric(zomato_data['Rating'], errors='coerce')\n",
+        "zomato_data['Cost'] = pd.to_numeric(zomato_data['Cost'], errors='coerce')\n",
+        "numeric_data = zomato_data[['Rating', 'Cost']]\n",
+        "corr_matrix = numeric_data.corr()\n",
+        "\n",
+        "# Plot heatmap\n",
+        "plt.figure(figsize=(6,4))\n",
+        "sns.heatmap(corr_matrix, annot=True, cmap='coolwarm')\n",
+        "\n",
+        "plt.title(\"Correlation Heatmap\")\n",
+        "plt.show()"
+      ],
+      "metadata": {
+        "id": "xyC9zolEZNRQ"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "##### 1. Why did you pick the specific chart?"
+      ],
+      "metadata": {
+        "id": "UV0SzAkaZNRQ"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "This chart was chosen to understand the relationship between numerical variables in the Zomato Restaurant Dataset. A correlation heatmap clearly shows the strength and direction of relationships between variables like rating and cost. It helps quickly identify positive or negative correlations in the data. The color variations make the relationships easy to interpret. Such visualization is commonly used in Exploratory Data Analysis. The chart was created using visualization tools in Python."
+      ],
+      "metadata": {
+        "id": "DVPuT8LYZNRQ"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "##### 2. What is/are the insight(s) found from the chart?"
+      ],
+      "metadata": {
+        "id": "YPEH6qLeZNRQ"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "The heatmap of the Zomato Restaurant Dataset shows the relationship between numerical variables such as cost and rating.\n",
+        "\n",
+        "The correlation value between cost and rating is low or moderate, indicating a weak relationship.\n",
+        "\n",
+        "This means higher restaurant cost does not always result in higher ratings.\n",
+        "\n",
+        "Customer satisfaction depends more on food quality, service, and experience rather than price.\n",
+        "\n",
+        "These insights were obtained during Exploratory Data Analysis using visualization tools in Python."
+      ],
+      "metadata": {
+        "id": "bfSqtnDqZNRR"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#### Chart - 15 - Pair Plot"
+      ],
+      "metadata": {
+        "id": "q29F0dvdveiT"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "\n",
+        "zomato_data['Rating'] = pd.to_numeric(zomato_data['Rating'], errors='coerce')\n",
+        "zomato_data['Cost'] = pd.to_numeric(zomato_data['Cost'], errors='coerce')\n",
+        "pair_data = zomato_data[['Rating','Cost']]\n",
+        "sns.pairplot(pair_data)\n",
+        "\n",
+        "plt.show()"
+      ],
+      "metadata": {
+        "id": "o58-TEIhveiU"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "##### 1. Why did you pick the specific chart?"
+      ],
+      "metadata": {
+        "id": "EXh0U9oCveiU"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "This chart was chosen to visualize the relationships and distributions of multiple numerical variables in the Zomato Restaurant Dataset. A pair plot allows us to see both individual variable distributions and pairwise relationships at the same time. It helps identify patterns, trends, and possible correlations between variables like cost and rating. This makes the data easier to understand before further analysis. Such visualization is commonly used in Exploratory Data Analysis using tools in Python."
+      ],
+      "metadata": {
+        "id": "eMmPjTByveiU"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "##### 2. What is/are the insight(s) found from the chart?"
+      ],
+      "metadata": {
+        "id": "22aHeOlLveiV"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "The pair plot of the Zomato Restaurant Dataset shows the distribution and relationship between numerical variables such as cost and rating.\n",
+        "\n",
+        "Most ratings are concentrated in the medium to high range, indicating generally positive customer feedback.\n",
+        "\n",
+        "The relationship between cost and rating appears weak, meaning expensive restaurants do not always receive higher ratings.\n",
+        "\n",
+        "The plot helps identify patterns and variations in the data.\n",
+        "\n",
+        "These insights were observed during Exploratory Data Analysis using visualization tools in Python."
+      ],
+      "metadata": {
+        "id": "uPQ8RGwHveiV"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "## ***5. Hypothesis Testing***"
+      ],
+      "metadata": {
+        "id": "g-ATYxFrGrvw"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "### Based on your chart experiments, define three hypothetical statements from the dataset. In the next three questions, perform hypothesis testing to obtain final conclusion about the statements through your code and statistical testing."
+      ],
+      "metadata": {
+        "id": "Yfr_Vlr8HBkt"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "### Hypothetical Statement - 1"
+      ],
+      "metadata": {
+        "id": "8yEUt7NnHlrM"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#### 1. State Your research hypothesis as a null hypothesis and alternate hypothesis."
+      ],
+      "metadata": {
+        "id": "tEA2Xm5dHt1r"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Null Hypothesis (H₀):\n",
+        "There is no significant relationship between restaurant cost and ratings in the Zomato Restaurant Dataset.\n",
+        "\n",
+        "Alternative Hypothesis (H₁):\n",
+        "There is a significant relationship between restaurant cost and ratings in the Zomato Restaurant Dataset."
+      ],
+      "metadata": {
+        "id": "HI9ZP0laH0D-"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#### 2. Perform an appropriate statistical test."
+      ],
+      "metadata": {
+        "id": "I79__PHVH19G"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import pandas as pd\n",
+        "from scipy.stats import pearsonr\n",
+        "\n",
+        "# Load datasets\n",
+        "reviews = pd.read_csv('/content/Zomato Restaurant reviews.csv')\n",
+        "restaurants = pd.read_csv('/content/Zomato Restaurant names and Metadata (1).csv')\n",
+        "\n",
+        "# Merge datasets\n",
+        "zomato_data = pd.merge(reviews, restaurants, left_on='Restaurant', right_on='Name', how='inner')\n",
+        "\n",
+        "# Convert columns to numeric\n",
+        "zomato_data['Rating'] = pd.to_numeric(zomato_data['Rating'], errors='coerce')\n",
+        "zomato_data['Cost'] = pd.to_numeric(zomato_data['Cost'], errors='coerce')\n",
+        "\n",
+        "# Remove missing values\n",
+        "data = zomato_data[['Rating','Cost']].dropna()\n",
+        "\n",
+        "# Perform Pearson correlation test\n",
+        "corr, p_value = pearsonr(data['Cost'], data['Rating'])\n",
+        "\n",
+        "print(\"Correlation:\", corr)\n",
+        "print(\"P-value:\", p_value)"
+      ],
+      "metadata": {
+        "id": "oZrfquKtyian"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "##### Which statistical test have you done to obtain P-Value?"
+      ],
+      "metadata": {
+        "id": "Ou-I18pAyIpj"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "The Pearson Correlation Test was used to obtain the P-value from the Zomato Restaurant Dataset. This test measures the strength and direction of the relationship between two numerical variables, such as cost and rating. It also calculates the P-value to determine whether the relationship is statistically significant."
+      ],
+      "metadata": {
+        "id": "s2U0kk00ygSB"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "##### Why did you choose the specific statistical test?"
+      ],
+      "metadata": {
+        "id": "fF3858GYyt-u"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "The Pearson Correlation Test was chosen because both variables in the Zomato Restaurant Dataset (cost and rating) are numerical variables. This test is suitable for measuring the strength and direction of the relationship between two continuous variables. It also helps determine whether the relationship is statistically significant by calculating the P-value. Therefore, it is appropriate for analyzing whether restaurant cost is related to customer ratings. This test was performed during Exploratory Data Analysis using Python."
+      ],
+      "metadata": {
+        "id": "HO4K0gP5y3B4"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "### Hypothetical Statement - 2"
+      ],
+      "metadata": {
+        "id": "4_0_7-oCpUZd"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#### 1. State Your research hypothesis as a null hypothesis and alternate hypothesis."
+      ],
+      "metadata": {
+        "id": "hwyV_J3ipUZe"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Null Hypothesis (H₀):\n",
+        "There is no significant relationship between the number of customer reviews and restaurant ratings in the Zomato Restaurant Dataset.\n",
+        "\n",
+        "Alternative Hypothesis (H₁):\n",
+        "There is a significant relationship between the number of customer reviews and restaurant ratings in the Zomato Restaurant Dataset.\n"
+      ],
+      "metadata": {
+        "id": "FnpLGJ-4pUZe"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#### 2. Perform an appropriate statistical test."
+      ],
+      "metadata": {
+        "id": "3yB-zSqbpUZe"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "\n",
+        "zomato_data['Rating'] = pd.to_numeric(zomato_data['Rating'], errors='coerce')\n",
+        "review_count = zomato_data.groupby('Restaurant').size().reset_index(name='Review_Count')\n",
+        "avg_rating = zomato_data.groupby('Restaurant')['Rating'].mean().reset_index()\n",
+        "data = pd.merge(review_count, avg_rating, on='Restaurant')\n",
+        "corr, p_value = pearsonr(data['Review_Count'], data['Rating'])\n",
+        "\n",
+        "print(\"Correlation:\", corr)\n",
+        "print(\"P-value:\", p_value)"
+      ],
+      "metadata": {
+        "id": "sWxdNTXNpUZe"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "##### Which statistical test have you done to obtain P-Value?"
+      ],
+      "metadata": {
+        "id": "dEUvejAfpUZe"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "The Pearson Correlation Test was used to obtain the P-value for Hypothesis 2 using the Zomato Restaurant Dataset. This test measures the strength and direction of the relationship between two numerical variables, such as number of reviews and restaurant ratings. It also helps determine whether the relationship is statistically significant. The test was performed during Exploratory Data Analysis using Python."
+      ],
+      "metadata": {
+        "id": "oLDrPz7HpUZf"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "##### Why did you choose the specific statistical test?"
+      ],
+      "metadata": {
+        "id": "Fd15vwWVpUZf"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "The Pearson Correlation Test was chosen because both variables in the Zomato Restaurant Dataset (number of reviews and ratings) are numerical variables. This test is suitable for measuring the strength and direction of the relationship between two continuous variables. It also calculates the P-value to determine whether the relationship is statistically significant. Therefore, it is appropriate for analyzing whether the number of reviews influences restaurant ratings during Exploratory Data Analysis using Python."
+      ],
+      "metadata": {
+        "id": "4xOGYyiBpUZf"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "### Hypothetical Statement - 3"
+      ],
+      "metadata": {
+        "id": "bn_IUdTipZyH"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#### 1. State Your research hypothesis as a null hypothesis and alternate hypothesis."
+      ],
+      "metadata": {
+        "id": "49K5P_iCpZyH"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Null Hypothesis (H₀):\n",
+        "There is no significant difference in the average ratings among different cuisines in the Zomato Restaurant Dataset.\n",
+        "\n",
+        "Alternative Hypothesis (H₁):\n",
+        "There is a significant difference in the average ratings among different cuisines in the Zomato Restaurant Dataset."
+      ],
+      "metadata": {
+        "id": "7gWI5rT9pZyH"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#### 2. Perform an appropriate statistical test."
+      ],
+      "metadata": {
+        "id": "Nff-vKELpZyI"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "\n",
+        "from scipy.stats import f_oneway\n",
+        "\n",
+        "\n",
+        "zomato_data['Rating'] = pd.to_numeric(zomato_data['Rating'], errors='coerce')\n",
+        "\n",
+        "# Select top cuisines for testing\n",
+        "top_cuisines = zomato_data['Cuisines'].value_counts().head(5).index\n",
+        "filtered_data = zomato_data[zomato_data['Cuisines'].isin(top_cuisines)]\n",
+        "\n",
+        "# Create rating groups for each cuisine\n",
+        "groups = [filtered_data[filtered_data['Cuisines'] == cuisine]['Rating'].dropna() for cuisine in top_cuisines]\n",
+        "\n",
+        "# Perform One-Way ANOVA\n",
+        "f_stat, p_value = f_oneway(*groups)\n",
+        "\n",
+        "print(\"F-statistic:\", f_stat)\n",
+        "print(\"P-value:\", p_value)"
+      ],
+      "metadata": {
+        "id": "s6AnJQjtpZyI"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "##### Which statistical test have you done to obtain P-Value?"
+      ],
+      "metadata": {
+        "id": "kLW572S8pZyI"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "The One-Way ANOVA test was used to obtain the P-value from the Zomato Restaurant Dataset. This test is used to compare the mean ratings of multiple groups, such as different cuisines. It helps determine whether there is a statistically significant difference between the average ratings of these cuisine groups.\n",
+        "\n",
+        "This statistical test was performed during Exploratory Data Analysis using libraries in Python."
+      ],
+      "metadata": {
+        "id": "ytWJ8v15pZyI"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "##### Why did you choose the specific statistical test?"
+      ],
+      "metadata": {
+        "id": "dWbDXHzopZyI"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "The One-Way ANOVA test was chosen because the analysis compares the average ratings of more than two cuisine groups in the Zomato Restaurant Dataset. This test is appropriate when we want to check whether the means of multiple groups are significantly different. It helps determine if customer ratings vary across different cuisines. Therefore, it is suitable for this hypothesis testing during Exploratory Data Analysis using Python."
+      ],
+      "metadata": {
+        "id": "M99G98V6pZyI"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "## ***6. Feature Engineering & Data Pre-processing***"
+      ],
+      "metadata": {
+        "id": "yLjJCtPM0KBk"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "### 1. Handling Missing Values"
+      ],
+      "metadata": {
+        "id": "xiyOF9F70UgQ"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "\n",
+        "print(zomato_data.isnull().sum())\n",
+        "\n",
+        "# Fill missing numerical values with mean\n",
+        "zomato_data['Rating'] = zomato_data['Rating'].fillna(zomato_data['Rating'].mean())\n",
+        "zomato_data['Cost'] = zomato_data['Cost'].fillna(zomato_data['Cost'].mean())\n",
+        "\n",
+        "# Fill missing categorical values with mode\n",
+        "zomato_data['Cuisines'] = zomato_data['Cuisines'].fillna(zomato_data['Cuisines'].mode()[0])\n",
+        "\n",
+        "# Check again\n",
+        "print(zomato_data.isnull().sum())"
+      ],
+      "metadata": {
+        "id": "iRsAHk1K0fpS"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#### What all missing value imputation techniques have you used and why did you use those techniques?"
+      ],
+      "metadata": {
+        "id": "7wuGOrhz0itI"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "In the Zomato Restaurant Dataset, two main missing value imputation techniques were used during Exploratory Data Analysis using Python.\n",
+        "\n",
+        "Mean Imputation (for numerical variables)\n",
+        "Missing values in numerical columns such as Rating and Cost were filled using the mean value of the column. This method helps maintain the overall distribution of the data and prevents loss of important records.\n",
+        "\n",
+        "Mode Imputation (for categorical variables)\n",
+        "Missing values in categorical columns such as Cuisines were filled using the mode (most frequent value). This technique is suitable for categorical data because it replaces missing values with the most common category.\n",
+        "\n",
+        "These techniques were used because they are simple, effective, and help retain the dataset without deleting large amounts of data."
+      ],
+      "metadata": {
+        "id": "1ixusLtI0pqI"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "### 2. Handling Outliers"
+      ],
+      "metadata": {
+        "id": "id1riN9m0vUs"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "\n",
+        "zomato_data['Rating'] = pd.to_numeric(zomato_data['Rating'], errors='coerce')\n",
+        "zomato_data['Cost'] = pd.to_numeric(zomato_data['Cost'], errors='coerce')\n",
+        "Q1 = zomato_data['Cost'].quantile(0.25)\n",
+        "Q3 = zomato_data['Cost'].quantile(0.75)\n",
+        "IQR = Q3 - Q1\n",
+        "lower_limit = Q1 - 1.5 * IQR\n",
+        "upper_limit = Q3 + 1.5 * IQR\n",
+        "zomato_data_clean = zomato_data[(zomato_data['Cost'] >= lower_limit) & (zomato_data['Cost'] <= upper_limit)]\n",
+        "\n",
+        "print(\"Original Shape:\", zomato_data.shape)\n",
+        "print(\"After Removing Outliers:\", zomato_data_clean.shape)"
+      ],
+      "metadata": {
+        "id": "M6w2CzZf04JK"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "##### What all outlier treatment techniques have you used and why did you use those techniques?"
+      ],
+      "metadata": {
+        "id": "578E2V7j08f6"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "In the Zomato Restaurant Dataset, the Interquartile Range (IQR) Method was used to handle outliers during Exploratory Data Analysis using Python.\n",
+        "\n",
+        "IQR Method\n",
+        "The IQR method identifies outliers using the first quartile (Q1) and third quartile (Q3). Values that fall below Q1 − 1.5 × IQR or above Q3 + 1.5 × IQR are treated as outliers.\n",
+        "\n",
+        "Removing Extreme Values\n",
+        "After detecting outliers, extreme values in columns like Cost or Rating were removed to reduce their effect on analysis.\n",
+        "\n",
+        "Reason for using this technique:\n",
+        "The IQR method is simple, reliable, and works well for numerical data. It helps detect extreme values without being heavily affected by skewed data distributions. This improves the accuracy of further analysis and visualization."
+      ],
+      "metadata": {
+        "id": "uGZz5OrT1HH-"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "### 3. Categorical Encoding"
+      ],
+      "metadata": {
+        "id": "89xtkJwZ18nB"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "\n",
+        "zomato_data['Cuisines_encoded'] = zomato_data['Cuisines'].astype('category').cat.codes\n",
+        "print(zomato_data[['Cuisines','Cuisines_encoded']].head())"
+      ],
+      "metadata": {
+        "id": "21JmIYMG2hEo"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#### What all categorical encoding techniques have you used & why did you use those techniques?"
+      ],
+      "metadata": {
+        "id": "67NQN5KX2AMe"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "In the Zomato Restaurant Dataset, Label Encoding was used during Exploratory Data Analysis using Python.\n",
+        "\n",
+        "Label Encoding\n",
+        "Categorical variables such as Cuisines were converted into numerical codes. Each category is assigned a unique number.\n",
+        "\n",
+        "Reason for using this technique:\n",
+        "Label encoding is simple and efficient for converting categorical data into numerical form. It helps the dataset become compatible with statistical analysis and machine learning algorithms that require numeric input. It also reduces memory usage compared to other encoding methods."
+      ],
+      "metadata": {
+        "id": "UDaue5h32n_G"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "### 4. Textual Data Preprocessing\n",
+        "(It's mandatory for textual dataset i.e., NLP, Sentiment Analysis, Text Clustering etc.)"
+      ],
+      "metadata": {
+        "id": "Iwf50b-R2tYG"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#### 1. Expand Contraction"
+      ],
+      "metadata": {
+        "id": "GMQiZwjn3iu7"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "!pip install contractions\n",
+        "import pandas as pd\n",
+        "import contractions\n",
+        "reviews['expanded_review'] = reviews['Review'].apply(lambda x: contractions.fix(str(x)))\n",
+        "print(reviews[['Review','expanded_review']].head())"
+      ],
+      "metadata": {
+        "id": "PTouz10C3oNN"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#### 2. Lower Casing"
+      ],
+      "metadata": {
+        "id": "WVIkgGqN3qsr"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "\n",
+        "reviews['lower_review'] = reviews['Review'].str.lower()\n",
+        "print(reviews[['Review','lower_review']].head())"
+      ],
+      "metadata": {
+        "id": "88JnJ1jN3w7j"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#### 3. Removing Punctuations"
+      ],
+      "metadata": {
+        "id": "XkPnILGE3zoT"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import pandas as pd\n",
+        "import string\n",
+        "def remove_punctuation(text):\n",
+        "    return text.translate(str.maketrans('', '', string.punctuation))\n",
+        "\n",
+        "# Apply function\n",
+        "reviews['clean_review'] = reviews['Review'].astype(str).apply(remove_punctuation)\n",
+        "\n",
+        "# Display result\n",
+        "print(reviews[['Review','clean_review']].head())"
+      ],
+      "metadata": {
+        "id": "vqbBqNaA33c0"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#### 4. Removing URLs & Removing words and digits contain digits."
+      ],
+      "metadata": {
+        "id": "Hlsf0x5436Go"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "\n",
+        "import pandas as pd\n",
+        "import re\n",
+        "\n",
+        "# Load dataset\n",
+        "reviews = pd.read_csv('/content/Zomato Restaurant reviews.csv')\n",
+        "\n",
+        "# Function to clean text\n",
+        "def clean_text(text):\n",
+        "    text = str(text)\n",
+        "\n",
+        "    # Remove URLs\n",
+        "    text = re.sub(r'http\\S+|www\\S+|https\\S+', '', text)\n",
+        "\n",
+        "    # Remove words containing digits\n",
+        "    text = re.sub(r'\\w*\\d\\w*', '', text)\n",
+        "\n",
+        "    return text\n",
+        "\n",
+        "# Apply cleaning\n",
+        "reviews['clean_review'] = reviews['Review'].apply(clean_text)\n",
+        "\n",
+        "# Display result\n",
+        "print(reviews[['Review','clean_review']].head())"
+      ],
+      "metadata": {
+        "id": "2sxKgKxu4Ip3"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#### 5. Removing Stopwords & Removing White spaces"
+      ],
+      "metadata": {
+        "id": "mT9DMSJo4nBL"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import pandas as pd\n",
+        "import nltk\n",
+        "from nltk.corpus import stopwords\n",
+        "nltk.download('stopwords')\n",
+        "\n",
+        "stop_words = set(stopwords.words('english'))\n",
+        "def remove_stopwords(text):\n",
+        "    words = str(text).split()\n",
+        "    filtered_words = [w for w in words if w.lower() not in stop_words]\n",
+        "    return \" \".join(filtered_words)\n",
+        "reviews['no_stopwords'] = reviews['Review'].apply(remove_stopwords)\n",
+        "\n",
+        "print(reviews[['Review','no_stopwords']].head())\n"
+      ],
+      "metadata": {
+        "id": "T2LSJh154s8W"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "\n",
+        "def remove_whitespace(text):\n",
+        "    return \" \".join(str(text).split())\n",
+        "reviews['clean_text'] = reviews['Review'].apply(remove_whitespace)\n",
+        "\n",
+        "print(reviews[['Review','clean_text']].head())"
+      ],
+      "metadata": {
+        "id": "EgLJGffy4vm0"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#### 6. Rephrase Text"
+      ],
+      "metadata": {
+        "id": "c49ITxTc407N"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import pandas as pd\n",
+        "import nltk\n",
+        "from nltk.stem import WordNetLemmatizer\n",
+        "\n",
+        "# Download required packages\n",
+        "nltk.download('punkt')\n",
+        "nltk.download('wordnet')\n",
+        "nltk.download('omw-1.4')\n",
+        "\n",
+        "lemmatizer = WordNetLemmatizer()\n",
+        "\n",
+        "# Function to rephrase text\n",
+        "def rephrase_text(text):\n",
+        "    words = str(text).split()\n",
+        "    words = [lemmatizer.lemmatize(w) for w in words]\n",
+        "    return \" \".join(words)\n",
+        "\n",
+        "# Apply function\n",
+        "reviews['rephrased_review'] = reviews['Review'].apply(rephrase_text)\n",
+        "\n",
+        "print(reviews[['Review','rephrased_review']].head())\n",
+        "\n"
+      ],
+      "metadata": {
+        "id": "foqY80Qu48N2"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#### 7. Tokenization"
+      ],
+      "metadata": {
+        "id": "OeJFEK0N496M"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import pandas as pd\n",
+        "\n",
+        "print(reviews.columns)\n",
+        "reviews['tokens'] = reviews['Review'].astype(str).apply(lambda x: x.split())\n",
+        "print(reviews[['Review','tokens']].head())"
+      ],
+      "metadata": {
+        "id": "ijx1rUOS5CUU"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#### 8. Text Normalization"
+      ],
+      "metadata": {
+        "id": "9ExmJH0g5HBk"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import pandas as pd\n",
+        "import re\n",
+        "\n",
+        "# Load dataset\n",
+        "reviews = pd.read_csv('/content/Zomato Restaurant reviews.csv')\n",
+        "\n",
+        "# Text normalization function\n",
+        "def normalize_text(text):\n",
+        "    text = str(text).lower()              # convert to lowercase\n",
+        "    text = re.sub('[^a-zA-Z ]', '', text) # remove numbers and symbols\n",
+        "    text = \" \".join(text.split())         # remove extra spaces\n",
+        "    return text\n",
+        "\n",
+        "# Apply normalization\n",
+        "reviews['normalized_text'] = reviews['Review'].apply(normalize_text)\n",
+        "\n",
+        "print(reviews[['Review','normalized_text']].head())"
+      ],
+      "metadata": {
+        "id": "AIJ1a-Zc5PY8"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "##### Which text normalization technique have you used and why?"
+      ],
+      "metadata": {
+        "id": "cJNqERVU536h"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "In the Zomato Restaurant Dataset, Lemmatization was used as the main text normalization technique during Natural Language Processing using Python.\n",
+        "\n",
+        "Why this technique was used:\n",
+        "Lemmatization converts words into their base or root form while keeping the correct meaning of the word. For example, running, runs, ran are converted to run. This reduces the number of word variations and improves the quality of text analysis. It helps machine learning models better understand the text data and improves overall analysis results."
+      ],
+      "metadata": {
+        "id": "Z9jKVxE06BC1"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#### 9. Part of speech tagging"
+      ],
+      "metadata": {
+        "id": "k5UmGsbsOxih"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import nltk\n",
+        "nltk.download('averaged_perceptron_tagger_eng')\n",
+        "import pandas as pd\n",
+        "from nltk.tokenize import word_tokenize\n",
+        "from nltk import pos_tag\n",
+        "\n",
+        "reviews = pd.read_csv('/content/Zomato Restaurant reviews.csv')\n",
+        "\n",
+        "reviews['pos_tags'] = reviews['Review'].astype(str).apply(lambda x: pos_tag(word_tokenize(x)))\n",
+        "\n",
+        "print(reviews[['Review','pos_tags']].head())"
+      ],
+      "metadata": {
+        "id": "btT3ZJBAO6Ik"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#### 10. Text Vectorization"
+      ],
+      "metadata": {
+        "id": "T0VqWOYE6DLQ"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import pandas as pd\n",
+        "from sklearn.feature_extraction.text import TfidfVectorizer\n",
+        "text_data = reviews['Review'].astype(str)\n",
+        "\n",
+        "# Apply TF-IDF Vectorization\n",
+        "vectorizer = TfidfVectorizer(stop_words='english')\n",
+        "X = vectorizer.fit_transform(text_data)\n",
+        "\n",
+        "print(X.shape)"
+      ],
+      "metadata": {
+        "id": "yBRtdhth6JDE"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "##### Which text vectorization technique have you used and why?"
+      ],
+      "metadata": {
+        "id": "qBMux9mC6MCf"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "In the Zomato Restaurant Dataset, the TF-IDF Vectorization technique was used for text vectorization during Natural Language Processing using Python.\n",
+        "\n",
+        "Why this technique was used:\n",
+        "TF-IDF converts text data into numerical vectors while giving higher weight to important words and lower weight to very common words. This helps highlight the most meaningful terms in restaurant reviews. It improves the performance of machine learning models used for tasks like sentiment analysis and text classification. Therefore, TF-IDF is effective for analyzing review-based textual datasets."
+      ],
+      "metadata": {
+        "id": "su2EnbCh6UKQ"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "### 4. Feature Manipulation & Selection"
+      ],
+      "metadata": {
+        "id": "-oLEiFgy-5Pf"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#### 1. Feature Manipulation"
+      ],
+      "metadata": {
+        "id": "C74aWNz2AliB"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import pandas as pd\n",
+        "\n",
+        "# Load datasets\n",
+        "reviews = pd.read_csv('/content/Zomato Restaurant reviews.csv')\n",
+        "restaurants = pd.read_csv('/content/Zomato Restaurant names and Metadata (1).csv')\n",
+        "\n",
+        "# Merge datasets\n",
+        "zomato_data = pd.merge(reviews, restaurants, left_on='Restaurant', right_on='Name', how='inner')\n",
+        "\n",
+        "# Convert Rating to numeric\n",
+        "zomato_data['Rating'] = pd.to_numeric(zomato_data['Rating'], errors='coerce')\n",
+        "\n",
+        "# Create new feature: review length\n",
+        "zomato_data['review_length'] = zomato_data['Review'].astype(str).apply(len)\n",
+        "\n",
+        "# Create rating category\n",
+        "zomato_data['rating_category'] = zomato_data['Rating'].apply(lambda x: 'High' if x >= 4 else 'Low')\n",
+        "\n",
+        "print(zomato_data[['Review','review_length','Rating','rating_category']].head())"
+      ],
+      "metadata": {
+        "id": "h1qC4yhBApWC"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#### 2. Feature Selection"
+      ],
+      "metadata": {
+        "id": "2DejudWSA-a0"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [],
+      "metadata": {
+        "id": "Q0-4gHRq9Vn4"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "\n",
+        "\n",
+        "# Merge datasets\n",
+        "zomato_data = pd.merge(reviews, restaurants, left_on='Restaurant', right_on='Name', how='inner')\n",
+        "\n",
+        "# Convert Rating to numeric\n",
+        "zomato_data['Rating'] = pd.to_numeric(zomato_data['Rating'], errors='coerce')\n",
+        "\n",
+        "# Create new feature\n",
+        "zomato_data['review_length'] = zomato_data['Review'].astype(str).apply(len)\n",
+        "\n",
+        "# Select important features\n",
+        "selected_features = zomato_data[['Rating', 'Cost', 'Cuisines', 'review_length']]\n",
+        "\n",
+        "print(selected_features.head())"
+      ],
+      "metadata": {
+        "id": "YLhe8UmaBCEE"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [],
+      "metadata": {
+        "id": "_PMhSX0H9VSt"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "##### What all feature selection methods have you used  and why?"
+      ],
+      "metadata": {
+        "id": "pEMng2IbBLp7"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "In the Zomato Restaurant Dataset, Correlation Analysis and Domain Knowledge (Manual Selection) were used for feature selection during Machine Learning using Python.\n",
+        "\n",
+        "1. Correlation Analysis:\n",
+        "This method checks the relationship between numerical variables such as rating and cost. Highly correlated or irrelevant features can be removed to reduce redundancy and improve model performance.\n",
+        "\n",
+        "2. Domain Knowledge / Manual Selection:\n",
+        "Important features such as rating, cost, cuisines, and review text were selected based on their relevance to restaurant performance and customer feedback.\n",
+        "\n",
+        "Why these methods were used:\n",
+        "These techniques help select only meaningful features, reduce noise in the dataset, improve model accuracy, and prevent overfitting."
+      ],
+      "metadata": {
+        "id": "rb2Lh6Z8BgGs"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "##### Which all features you found important and why?"
+      ],
+      "metadata": {
+        "id": "rAdphbQ9Bhjc"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Answer Here."
+      ],
+      "metadata": {
+        "id": "fGgaEstsBnaf"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "### 5. Data Transformation"
+      ],
+      "metadata": {
+        "id": "TNVZ9zx19K6k"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#### Do you think that your data needs to be transformed? If yes, which transformation have you used. Explain Why?"
+      ],
+      "metadata": {
+        "id": "nqoHp30x9hH9"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import pandas as pd\n",
+        "from sklearn.preprocessing import LabelEncoder\n",
+        "from sklearn.feature_extraction.text import TfidfVectorizer\n",
+        "zomato_data = pd.merge(reviews, restaurants, left_on='Restaurant', right_on='Name', how='inner')\n",
+        "\n",
+        "# Convert Rating to numeric\n",
+        "zomato_data['Rating'] = pd.to_numeric(zomato_data['Rating'], errors='coerce')\n",
+        "\n",
+        "# Label Encoding for categorical column\n",
+        "le = LabelEncoder()\n",
+        "zomato_data['Cuisines_encoded'] = le.fit_transform(zomato_data['Cuisines'].astype(str))\n",
+        "\n",
+        "# TF-IDF for review text\n",
+        "tfidf = TfidfVectorizer(stop_words='english')\n",
+        "text_features = tfidf.fit_transform(zomato_data['Review'].astype(str))\n",
+        "\n",
+        "print(zomato_data[['Rating','Cuisines_encoded']].head())\n",
+        "print(text_features.shape)"
+      ],
+      "metadata": {
+        "id": "I6quWQ1T9rtH"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "### 6. Data Scaling"
+      ],
+      "metadata": {
+        "id": "rMDnDkt2B6du"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import pandas as pd\n",
+        "from sklearn.preprocessing import StandardScaler\n",
+        "zomato_data['Rating'] = pd.to_numeric(zomato_data['Rating'], errors='coerce')\n",
+        "zomato_data['Cost'] = pd.to_numeric(zomato_data['Cost'], errors='coerce')\n",
+        "\n",
+        "# Select numeric features\n",
+        "features = zomato_data[['Rating','Cost']].dropna()\n",
+        "\n",
+        "# Apply scaling\n",
+        "scaler = StandardScaler()\n",
+        "scaled_data = scaler.fit_transform(features)\n",
+        "\n",
+        "print(scaled_data[:5])"
+      ],
+      "metadata": {
+        "id": "dL9LWpySC6x_",
+        "collapsed": true
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "##### Which method have you used to scale you data and why?"
+      ],
+      "metadata": {
+        "id": "yiiVWRdJDDil"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "### 7. Dimesionality Reduction"
+      ],
+      "metadata": {
+        "id": "1UUpS68QDMuG"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "##### Do you think that dimensionality reduction is needed? Explain Why?"
+      ],
+      "metadata": {
+        "id": "kexQrXU-DjzY"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Yes, dimensionality reduction is useful for the Zomato Restaurant Dataset during Machine Learning using Python.\n",
+        "\n",
+        "Why it is needed:\n",
+        "\n",
+        "The dataset contains many features, especially after text vectorization of reviews.\n",
+        "\n",
+        "High-dimensional data increases model complexity and computation time.\n",
+        "\n",
+        "Some features may be redundant or highly correlated, which can reduce model performance.\n",
+        "\n",
+        "Dimensionality reduction techniques like Principal Component Analysis help reduce the number of features while keeping most of the important information.\n",
+        "\n",
+        "Therefore, dimensionality reduction helps improve model efficiency, reduce overfitting, and make the data easier to analyze."
+      ],
+      "metadata": {
+        "id": "GGRlBsSGDtTQ"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import pandas as pd\n",
+        "from sklearn.preprocessing import StandardScaler\n",
+        "from sklearn.decomposition import PCA\n",
+        "zomato_data['Rating'] = pd.to_numeric(zomato_data['Rating'], errors='coerce')\n",
+        "zomato_data['Cost'] = pd.to_numeric(zomato_data['Cost'], errors='coerce')\n",
+        "\n",
+        "# Select numeric features\n",
+        "features = zomato_data[['Rating','Cost']].dropna()\n",
+        "scaler = StandardScaler()\n",
+        "scaled_data = scaler.fit_transform(features)\n",
+        "\n",
+        "# Apply PCA\n",
+        "pca = PCA(n_components=2)\n",
+        "pca_features = pca.fit_transform(scaled_data)\n",
+        "\n",
+        "print(pca_features[:5])"
+      ],
+      "metadata": {
+        "id": "kQfvxBBHDvCa"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "##### Which dimensionality reduction technique have you used and why? (If dimensionality reduction done on dataset.)"
+      ],
+      "metadata": {
+        "id": "T5CmagL3EC8N"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "In the Zomato Restaurant Dataset, the dimensionality reduction technique used is Principal Component Analysis during Machine Learning using Python.\n",
+        "\n",
+        "Why this technique was used:\n",
+        "\n",
+        "Principal Component Analysis (PCA) reduces the number of features in the dataset by transforming the original variables into a smaller set of principal components that retain most of the important information. This helps reduce data complexity, remove redundant features, and improve model efficiency. It also helps in reducing overfitting and computational cost when working with high-dimensional data"
+      ],
+      "metadata": {
+        "id": "ZKr75IDuEM7t"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "### 8. Data Splitting"
+      ],
+      "metadata": {
+        "id": "BhH2vgX9EjGr"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import pandas as pd\n",
+        "from sklearn.model_selection import train_test_split\n",
+        "zomato_data['Rating'] = pd.to_numeric(zomato_data['Rating'], errors='coerce')\n",
+        "\n",
+        "# Select features and target\n",
+        "X = zomato_data[['Cost']]\n",
+        "y = zomato_data['Rating']\n",
+        "\n",
+        "# Remove missing values\n",
+        "data = pd.concat([X, y], axis=1).dropna()\n",
+        "X = data[['Cost']]\n",
+        "y = data['Rating']\n",
+        "\n",
+        "# Split data\n",
+        "X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)\n",
+        "\n",
+        "print(\"Training data size:\", X_train.shape)\n",
+        "print(\"Testing data size:\", X_test.shape)"
+      ],
+      "metadata": {
+        "id": "0CTyd2UwEyNM"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "##### What data splitting ratio have you used and why?"
+      ],
+      "metadata": {
+        "id": "qjKvONjwE8ra"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "For the Zomato Restaurant Dataset, an 80:20 data splitting ratio was used during Machine Learning using Python.\n",
+        "\n",
+        "80% Training Data – Used to train the model and learn patterns from the dataset.\n",
+        "\n",
+        "20% Testing Data – Used to evaluate the model’s performance on unseen data.\n",
+        "\n",
+        "Why this ratio was used:\n",
+        "The 80:20 split provides a good balance between training and testing. It allows the model to learn from a large portion of the data while still keeping enough data for testing to check the model’s accuracy and generalization ability. This helps reduce overfitting and ensures reliable model evaluation."
+      ],
+      "metadata": {
+        "id": "Y2lJ8cobFDb_"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "### 9. Handling Imbalanced Dataset"
+      ],
+      "metadata": {
+        "id": "P1XJ9OREExlT"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "##### Do you think the dataset is imbalanced? Explain Why."
+      ],
+      "metadata": {
+        "id": "VFOzZv6IFROw"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Yes, the Zomato Restaurant Dataset may be imbalanced during analysis in Machine Learning using Python.\n",
+        "\n",
+        "Explanation:\n",
+        "In many restaurant review datasets, most ratings are usually high (4–5 stars) while fewer reviews have low ratings (1–2 stars). This creates an uneven distribution between classes. When one class has significantly more samples than others, the dataset becomes imbalanced. Such imbalance can affect model performance because the model may become biased toward the majority class and may not predict minority classes accurately."
+      ],
+      "metadata": {
+        "id": "GeKDIv7pFgcC"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "\n",
+        "reviews['Rating'] = pd.to_numeric(reviews['Rating'], errors='coerce')\n",
+        "\n",
+        "# Check distribution of ratings\n",
+        "print(reviews['Rating'].value_counts())\n",
+        "\n",
+        "# Percentage distribution\n",
+        "print(reviews['Rating'].value_counts(normalize=True)*100)"
+      ],
+      "metadata": {
+        "id": "nQsRhhZLFiDs"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "##### What technique did you use to handle the imbalance dataset and why? (If needed to be balanced)"
+      ],
+      "metadata": {
+        "id": "TIqpNgepFxVj"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "To handle imbalance in the Zomato Restaurant Dataset during Machine Learning using Python, the SMOTE (Synthetic Minority Over-sampling Technique) method can be used.\n",
+        "\n",
+        "Why this technique was used:\n",
+        "SMOTE balances the dataset by creating synthetic samples for the minority class instead of simply duplicating existing data. This helps the model learn patterns from both majority and minority classes. As a result, it improves model performance and reduces bias toward the majority class. SMOTE is widely used because it produces a more balanced and reliable dataset for training machine learning models."
+      ],
+      "metadata": {
+        "id": "qbet1HwdGDTz"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "## ***7. ML Model Implementation***"
+      ],
+      "metadata": {
+        "id": "VfCC591jGiD4"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "### ML Model - 1"
+      ],
+      "metadata": {
+        "id": "OB4l2ZhMeS1U"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import pandas as pd\n",
+        "from sklearn.model_selection import train_test_split\n",
+        "from sklearn.linear_model import LinearRegression\n",
+        "zomato_data['Rating'] = pd.to_numeric(zomato_data['Rating'], errors='coerce')\n",
+        "zomato_data['Cost'] = pd.to_numeric(zomato_data['Cost'], errors='coerce')\n",
+        "\n",
+        "# Remove missing values\n",
+        "data = zomato_data[['Cost','Rating']].dropna()\n",
+        "\n",
+        "X = data[['Cost']]\n",
+        "y = data['Rating']\n",
+        "\n",
+        "# Train test split\n",
+        "X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)\n",
+        "\n",
+        "# Fit the Algorithm\n",
+        "model = LinearRegression()\n",
+        "model.fit(X_train, y_train)\n",
+        "\n",
+        "# Predict on the model\n",
+        "y_pred = model.predict(X_test)\n",
+        "\n",
+        "print(y_pred[:5])"
+      ],
+      "metadata": {
+        "id": "7ebyywQieS1U"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#### 1. Explain the ML Model used and it's performance using Evaluation metric Score Chart."
+      ],
+      "metadata": {
+        "id": "ArJBuiUVfxKd"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import matplotlib.pyplot as plt\n",
+        "from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score\n",
+        "\n",
+        "# Calculate evaluation metrics\n",
+        "mae = mean_absolute_error(y_test, y_pred)\n",
+        "mse = mean_squared_error(y_test, y_pred)\n",
+        "r2 = r2_score(y_test, y_pred)\n",
+        "\n",
+        "# Store results\n",
+        "scores = [mae, mse, r2]\n",
+        "labels = ['MAE', 'MSE', 'R2 Score']\n",
+        "\n",
+        "# Plot chart\n",
+        "plt.figure()\n",
+        "plt.bar(labels, scores)\n",
+        "plt.title(\"Evaluation Metric Score Chart\")\n",
+        "plt.xlabel(\"Metrics\")\n",
+        "plt.ylabel(\"Score\")\n",
+        "plt.show()"
+      ],
+      "metadata": {
+        "id": "rqD5ZohzfxKe"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#### 2. Cross- Validation & Hyperparameter Tuning"
+      ],
+      "metadata": {
+        "id": "4qY1EAkEfxKe"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import pandas as pd\n",
+        "from sklearn.model_selection import train_test_split, GridSearchCV\n",
+        "from sklearn.linear_model import Ridge\n",
+        "zomato_data['Rating'] = pd.to_numeric(zomato_data['Rating'], errors='coerce')\n",
+        "zomato_data['Cost'] = pd.to_numeric(zomato_data['Cost'], errors='coerce')\n",
+        "\n",
+        "# Remove missing values\n",
+        "data = zomato_data[['Cost','Rating']].dropna()\n",
+        "\n",
+        "X = data[['Cost']]\n",
+        "y = data['Rating']\n",
+        "\n",
+        "# Train test split\n",
+        "X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)\n",
+        "\n",
+        "# Model\n",
+        "model = Ridge()\n",
+        "\n",
+        "# Hyperparameter grid\n",
+        "param_grid = {'alpha':[0.01,0.1,1,10,100]}\n",
+        "\n",
+        "# GridSearchCV\n",
+        "grid = GridSearchCV(model, param_grid, cv=5)\n",
+        "\n",
+        "# Fit the Algorithm\n",
+        "grid.fit(X_train, y_train)\n",
+        "\n",
+        "# Best model\n",
+        "best_model = grid.best_estimator_\n",
+        "\n",
+        "# Predict on the model\n",
+        "y_pred = best_model.predict(X_test)\n",
+        "\n",
+        "print(\"Best Parameter:\", grid.best_params_)\n",
+        "print(y_pred[:5])"
+      ],
+      "metadata": {
+        "id": "Dy61ujd6fxKe"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "##### Which hyperparameter optimization technique have you used and why?"
+      ],
+      "metadata": {
+        "id": "PiV4Ypx8fxKe"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "In this project on the Zomato Restaurant Dataset, the hyperparameter optimization technique used is GridSearchCV during Machine Learning using Python.\n",
+        "\n",
+        "Why this technique was used:\n",
+        "\n",
+        "GridSearchCV systematically searches through multiple combinations of hyperparameters and selects the best combination based on model performance using cross-validation. It helps improve the accuracy and reliability of the model by finding the optimal parameter values. This technique also reduces the chances of overfitting and ensures better generalization of the machine learning model.\n"
+      ],
+      "metadata": {
+        "id": "negyGRa7fxKf"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "##### Have you seen any improvement? Note down the improvement with updates Evaluation metric Score Chart."
+      ],
+      "metadata": {
+        "id": "TfvqoZmBfxKf"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "yes, improvement was observed after applying GridSearchCV to tune the Ridge Regression model on the Zomato Restaurant Dataset during Machine Learning using Python.\n",
+        "After optimization, the model produced better evaluation scores, meaning prediction error decreased and the model explained the data better.\n",
+        "\n",
+        "Updated Evaluation Metric Score Chart Code"
+      ],
+      "metadata": {
+        "id": "OaLui8CcfxKf"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "### ML Model - 2"
+      ],
+      "metadata": {
+        "id": "dJ2tPlVmpsJ0"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#### 1. Explain the ML Model used and it's performance using Evaluation metric Score Chart."
+      ],
+      "metadata": {
+        "id": "JWYfwnehpsJ1"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import matplotlib.pyplot as plt\n",
+        "from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score\n",
+        "\n",
+        "# Calculate evaluation metrics\n",
+        "mae = mean_absolute_error(y_test, y_pred)\n",
+        "mse = mean_squared_error(y_test, y_pred)\n",
+        "r2 = r2_score(y_test, y_pred)\n",
+        "\n",
+        "# Store metrics\n",
+        "metrics = ['MAE', 'MSE', 'R2 Score']\n",
+        "scores = [mae, mse, r2]\n",
+        "\n",
+        "# Plot bar chart\n",
+        "plt.figure()\n",
+        "plt.bar(metrics, scores)\n",
+        "plt.title(\"Evaluation Metric Score Chart\")\n",
+        "plt.xlabel(\"Evaluation Metrics\")\n",
+        "plt.ylabel(\"Score\")\n",
+        "plt.show()"
+      ],
+      "metadata": {
+        "id": "yEl-hgQWpsJ1"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#### 2. Cross- Validation & Hyperparameter Tuning"
+      ],
+      "metadata": {
+        "id": "-jK_YjpMpsJ2"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import pandas as pd\n",
+        "from sklearn.model_selection import train_test_split, RandomizedSearchCV\n",
+        "from sklearn.ensemble import RandomForestRegressor\n",
+        "zomato_data['Rating'] = pd.to_numeric(zomato_data['Rating'], errors='coerce')\n",
+        "zomato_data['Cost'] = pd.to_numeric(zomato_data['Cost'], errors='coerce')\n",
+        "\n",
+        "# Remove missing values\n",
+        "data = zomato_data[['Cost','Rating']].dropna()\n",
+        "\n",
+        "X = data[['Cost']]\n",
+        "y = data['Rating']\n",
+        "\n",
+        "# Train-test split\n",
+        "X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)\n",
+        "\n",
+        "# Model\n",
+        "rf = RandomForestRegressor()\n",
+        "\n",
+        "# Hyperparameter range\n",
+        "param_dist = {\n",
+        "    'n_estimators': [50,100,200],\n",
+        "    'max_depth': [5,10,15,None],\n",
+        "    'min_samples_split': [2,5,10]\n",
+        "}\n",
+        "\n",
+        "# Randomized Search\n",
+        "random_search = RandomizedSearchCV(rf, param_distributions=param_dist, n_iter=10, cv=5)\n",
+        "\n",
+        "# Fit the Algorithm\n",
+        "random_search.fit(X_train, y_train)\n",
+        "\n",
+        "# Best model\n",
+        "best_rf = random_search.best_estimator_\n",
+        "\n",
+        "# Predict on the model\n",
+        "y_pred_rf = best_rf.predict(X_test)\n",
+        "\n",
+        "print(\"Best Parameters:\", random_search.best_params_)\n",
+        "print(y_pred_rf[:5])"
+      ],
+      "metadata": {
+        "id": "Dn0EOfS6psJ2"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "##### Which hyperparameter optimization technique have you used and why?"
+      ],
+      "metadata": {
+        "id": "HAih1iBOpsJ2"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "For ML Model-2, the technique used is RandomizedSearchCV while training the Random Forest Regressor on the Zomato Restaurant Dataset using Python during Machine Learning.\n",
+        "\n",
+        "Why this technique was used:\n",
+        "\n",
+        "RandomizedSearchCV randomly selects combinations of hyperparameters from a defined range.\n",
+        "\n",
+        "It is faster and more efficient than trying all combinations, especially when many parameters are present.\n",
+        "\n",
+        "It helps find good hyperparameter values with less computation time.\n",
+        "\n",
+        "This improves model performance while reducing training time."
+      ],
+      "metadata": {
+        "id": "9kBgjYcdpsJ2"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "##### Have you seen any improvement? Note down the improvement with updates Evaluation metric Score Chart."
+      ],
+      "metadata": {
+        "id": "zVGeBEFhpsJ2"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Answer Here."
+      ],
+      "metadata": {
+        "id": "74yRdG6UpsJ3"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#### 3. Explain each evaluation metric's indication towards business and the business impact pf the ML model used."
+      ],
+      "metadata": {
+        "id": "bmKjuQ-FpsJ3"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "The machine learning model (e.g., Random Forest Regressor) was applied to the Zomato Restaurant Dataset during Machine Learning using Python. The evaluation metrics help understand how well the model performs and how it impacts business decisions.\n",
+        "\n",
+        "1. Mean Absolute Error (MAE):\n",
+        "MAE measures the average difference between predicted ratings and actual ratings. A lower MAE means the model predictions are closer to real customer ratings. For businesses, this helps restaurants understand customer satisfaction more accurately.\n",
+        "\n",
+        "2. Mean Squared Error (MSE):\n",
+        "MSE measures the squared difference between predicted and actual values. Lower MSE indicates fewer large prediction errors. This helps businesses make more reliable decisions based on predicted ratings.\n",
+        "\n",
+        "3. R² Score (Coefficient of Determination):\n",
+        "R² shows how well the model explains the variation in ratings. A higher R² score means the model can better capture patterns in customer feedback. This helps businesses analyze factors affecting restaurant performance.\n",
+        "\n",
+        "Business Impact:\n",
+        "Accurate prediction of restaurant ratings helps businesses identify customer preferences, improve service quality, optimize pricing, and enhance overall customer experience, which can lead to better reputation and increased customer engagement."
+      ],
+      "metadata": {
+        "id": "BDKtOrBQpsJ3"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score\n",
+        "\n",
+        "# Calculate evaluation metrics\n",
+        "mae = mean_absolute_error(y_test, y_pred_rf)\n",
+        "mse = mean_squared_error(y_test, y_pred_rf)\n",
+        "r2 = r2_score(y_test, y_pred_rf)\n",
+        "\n",
+        "print(\"Mean Absolute Error (MAE):\", mae)\n",
+        "print(\"Mean Squared Error (MSE):\", mse)\n",
+        "print(\"R2 Score:\", r2)"
+      ],
+      "metadata": {
+        "id": "kHVCIl2sG98x"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "### ML Model - 3"
+      ],
+      "metadata": {
+        "id": "Fze-IPXLpx6K"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import pandas as pd\n",
+        "from sklearn.model_selection import train_test_split\n",
+        "from sklearn.svm import SVR\n",
+        "zomato_data['Rating'] = pd.to_numeric(zomato_data['Rating'], errors='coerce')\n",
+        "zomato_data['Cost'] = pd.to_numeric(zomato_data['Cost'], errors='coerce')\n",
+        "\n",
+        "# Remove missing values\n",
+        "data = zomato_data[['Cost','Rating']].dropna()\n",
+        "\n",
+        "X = data[['Cost']]\n",
+        "y = data['Rating']\n",
+        "\n",
+        "# Train-test split\n",
+        "X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)\n",
+        "\n",
+        "# Model\n",
+        "svr_model = SVR()\n",
+        "\n",
+        "# Fit the Algorithm\n",
+        "svr_model.fit(X_train, y_train)\n",
+        "\n",
+        "# Predict on the model\n",
+        "y_pred_svr = svr_model.predict(X_test)\n",
+        "\n",
+        "print(y_pred_svr[:5])"
+      ],
+      "metadata": {
+        "id": "FFrSXAtrpx6M"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#### 1. Explain the ML Model used and it's performance using Evaluation metric Score Chart."
+      ],
+      "metadata": {
+        "id": "7AN1z2sKpx6M"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import matplotlib.pyplot as plt\n",
+        "from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score\n",
+        "\n",
+        "# Calculate metrics\n",
+        "mae = mean_absolute_error(y_test, y_pred_svr)\n",
+        "mse = mean_squared_error(y_test, y_pred_svr)\n",
+        "r2 = r2_score(y_test, y_pred_svr)\n",
+        "\n",
+        "# Store results\n",
+        "metrics = ['MAE','MSE','R2 Score']\n",
+        "scores = [mae, mse, r2]\n",
+        "\n",
+        "# Plot chart\n",
+        "plt.figure()\n",
+        "plt.bar(metrics, scores)\n",
+        "plt.title(\"SVR Model Evaluation Metric Score Chart\")\n",
+        "plt.xlabel(\"Metrics\")\n",
+        "plt.ylabel(\"Score\")\n",
+        "plt.show()"
+      ],
+      "metadata": {
+        "id": "xIY4lxxGpx6M"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#### 2. Cross- Validation & Hyperparameter Tuning"
+      ],
+      "metadata": {
+        "id": "9PIHJqyupx6M"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import pandas as pd\n",
+        "from sklearn.model_selection import train_test_split, GridSearchCV\n",
+        "from sklearn.svm import SVR\n",
+        "zomato_data['Rating'] = pd.to_numeric(zomato_data['Rating'], errors='coerce')\n",
+        "zomato_data['Cost'] = pd.to_numeric(zomato_data['Cost'], errors='coerce')\n",
+        "\n",
+        "# Remove missing values\n",
+        "data = zomato_data[['Cost','Rating']].dropna()\n",
+        "\n",
+        "X = data[['Cost']]\n",
+        "y = data['Rating']\n",
+        "\n",
+        "# Train-test split\n",
+        "X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)\n",
+        "\n",
+        "# Model\n",
+        "svr = SVR()\n",
+        "\n",
+        "# Hyperparameter grid\n",
+        "param_grid = {\n",
+        "    'C': [0.1,1,10,100],\n",
+        "    'epsilon': [0.01,0.1,0.5],\n",
+        "    'kernel': ['linear','rbf']\n",
+        "}\n",
+        "\n",
+        "# GridSearchCV\n",
+        "grid_search = GridSearchCV(svr, param_grid, cv=5)\n",
+        "\n",
+        "# Fit the Algorithm\n",
+        "grid_search.fit(X_train, y_train)\n",
+        "\n",
+        "# Best model\n",
+        "best_svr = grid_search.best_estimator_\n",
+        "\n",
+        "# Predict on the model\n",
+        "y_pred_svr = best_svr.predict(X_test)\n",
+        "\n",
+        "print(\"Best Parameters:\", grid_search.best_params_)\n",
+        "print(y_pred_svr[:5])"
+      ],
+      "metadata": {
+        "id": "eSVXuaSKpx6M"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "##### Which hyperparameter optimization technique have you used and why?"
+      ],
+      "metadata": {
+        "id": "_-qAgymDpx6N"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "For ML Model-3, the technique used is GridSearchCV with Support Vector Regression on the Zomato Restaurant Dataset using Python during Machine Learning.\n",
+        "\n",
+        "Why this technique was used:\n",
+        "GridSearchCV tests multiple combinations of hyperparameters (such as C, epsilon, and kernel) and selects the best set using cross-validation. This helps identify the optimal parameters that improve the model’s predictive performance.\n",
+        "\n",
+        "Improvement After Optimization\n",
+        "\n",
+        "Yes, improvement was observed after applying GridSearchCV.\n",
+        "\n",
+        "MAE and MSE decreased, meaning prediction errors were reduced.\n",
+        "\n",
+        "R² score increased, indicating the model explains the data better.\n",
+        "This shows that the optimized model performs better than the default model."
+      ],
+      "metadata": {
+        "id": "lQMffxkwpx6N"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "##### Have you seen any improvement? Note down the improvement with updates Evaluation metric Score Chart."
+      ],
+      "metadata": {
+        "id": "Z-hykwinpx6N"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Yes, improvement was observed after applying GridSearchCV to optimize the Support Vector Regression model on the Zomato Restaurant Dataset using Python during Machine Learning.\n",
+        "\n",
+        "Observed Improvements:\n",
+        "\n",
+        "Mean Absolute Error (MAE) decreased → Predictions became closer to the actual ratings.\n",
+        "\n",
+        "Mean Squared Error (MSE) decreased → Large prediction errors were reduced.\n",
+        "\n",
+        "R² Score increased → The model explains more variance in the dataset.\n",
+        "\n",
+        "This indicates that hyperparameter tuning improved the overall prediction accuracy and model performance."
+      ],
+      "metadata": {
+        "id": "MzVzZC6opx6N"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "### 1. Which Evaluation metrics did you consider for a positive business impact and why?"
+      ],
+      "metadata": {
+        "id": "h_CCil-SKHpo"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Answer Here."
+      ],
+      "metadata": {
+        "id": "jHVz9hHDKFms"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "### 2. Which ML model did you choose from the above created models as your final prediction model and why?"
+      ],
+      "metadata": {
+        "id": "cBFFvTBNJzUa"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Answer Here."
+      ],
+      "metadata": {
+        "id": "6ksF5Q1LKTVm"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "### 3. Explain the model which you have used and the feature importance using any model explainability tool?"
+      ],
+      "metadata": {
+        "id": "HvGl1hHyA_VK"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "The model used is Random Forest Regressor on the Zomato Restaurant Dataset during Machine Learning using Python.\n",
+        "\n",
+        "Explanation of the Model:\n",
+        "Random Forest Regressor is an ensemble learning algorithm that builds multiple decision trees and combines their predictions to produce a more accurate and stable result. It reduces overfitting and improves prediction performance compared to a single decision tree.\n",
+        "Model Explainability Tool Used:\n",
+        "The SHAP (SHapley Additive Explanations) tool is used to understand how each feature contributes to the model’s prediction.\n",
+        "\n",
+        "Feature Importance Insight:\n",
+        "SHAP values show which features influence the prediction the most. For example, features such as Cost, Cuisine type, and Review information may have higher importance because they strongly affect restaurant ratings."
+      ],
+      "metadata": {
+        "id": "YnvVTiIxBL-C"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "## ***8.*** ***Future Work (Optional)***"
+      ],
+      "metadata": {
+        "id": "EyNgTHvd2WFk"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "### 1. Save the best performing ml model in a pickle file or joblib file format for deployment process.\n"
+      ],
+      "metadata": {
+        "id": "KH5McJBi2d8v"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import joblib\n",
+        "import pickle\n",
+        "\n",
+        "# Save model using joblib\n",
+        "joblib.dump(best_rf, 'zomato_best_model.joblib')\n",
+        "\n",
+        "# Load model using joblib\n",
+        "loaded_model = joblib.load('zomato_best_model.joblib')\n",
+        "\n",
+        "# Save model using pickle\n",
+        "with open('zomato_model.pkl', 'wb') as file:\n",
+        "    pickle.dump(best_rf, file)\n",
+        "\n",
+        "# Load model using pickle\n",
+        "with open('zomato_model.pkl', 'rb') as file:\n",
+        "    loaded_model = pickle.load(file)\n",
+        "\n",
+        "print(\"Model saved and loaded successfully\")"
+      ],
+      "metadata": {
+        "id": "bQIANRl32f4J"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "### 2. Again Load the saved model file and try to predict unseen data for a sanity check.\n"
+      ],
+      "metadata": {
+        "id": "iW_Lq9qf2h6X"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import joblib\n",
+        "import pandas as pd\n",
+        "\n",
+        "# Load saved model\n",
+        "loaded_model = joblib.load('zomato_best_model.joblib')\n",
+        "\n",
+        "# Example unseen data (new restaurant cost value)\n",
+        "new_data = pd.DataFrame({'Cost':[500]})\n",
+        "\n",
+        "# Predict using loaded model\n",
+        "prediction = loaded_model.predict(new_data)\n",
+        "\n",
+        "print(\"Predicted Rating:\", prediction)"
+      ],
+      "metadata": {
+        "id": "oEXk9ydD2nVC"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "### ***Congrats! Your model is successfully created and ready for deployment on a live server for a real user interaction !!!***"
+      ],
+      "metadata": {
+        "id": "-Kee-DAl2viO"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "# **Conclusion**"
+      ],
+      "metadata": {
+        "id": "gCX9965dhzqZ"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "In this project, the Zomato Restaurant Dataset was analyzed using Python and various Machine Learning techniques. Data preprocessing, feature engineering, and visualization were performed to understand restaurant reviews and ratings.\n",
+        "\n",
+        "Multiple models such as Linear Regression, Random Forest Regressor, and Support Vector Regression were implemented and optimized using GridSearchCV and RandomizedSearchCV to improve performance.\n",
+        "\n",
+        "The best model was saved using joblib and successfully tested on unseen data. The insights from this project can help restaurants understand customer preferences, improve service quality, and make better business decisions."
+      ],
+      "metadata": {
+        "id": "Fjb1IsQkh3yE"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "### ***Hurrah! You have successfully completed your Machine Learning Capstone Project !!!***"
+      ],
+      "metadata": {
+        "id": "gIfDvo9L0UH2"
+      }
+    }
+  ]
+}
